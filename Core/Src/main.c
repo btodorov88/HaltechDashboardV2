@@ -22,11 +22,13 @@
 #include "cmsis_os.h"
 #include "libjpeg.h"
 #include "app_touchgfx.h"
+#include "queue.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stm32746g_discovery_qspi.h>
 #include <stdbool.h>
+#include <message_types.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,9 +96,14 @@ const osThreadAttr_t videoTask_attributes = {
   .stack_size = 1000 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for dataFeed */
+osThreadId_t dataFeedHandle;
+const osThreadAttr_t dataFeed_attributes = {
+  .name = "dataFeed",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
 /* USER CODE BEGIN PV */
-osThreadId dataFeedTaskHandle;
-
 static FMC_SDRAM_CommandTypeDef Command;
 /* USER CODE END PV */
 
@@ -113,6 +120,7 @@ static void MX_QUADSPI_Init(void);
 void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
 extern void videoTaskFunc(void *argument);
+void DataFeedTask(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -150,45 +158,7 @@ static float afr = 0.0f;
 static int tps = 0;
 static bool celIndicator = true;
 
-void DataFeedTask(void const* arg)
-{
-	while(1)
-	{
-		if(demoMode)
-		{
-			rpm = (rpm >= 8000) ? 0: rpm + 100;
-			maxRpm = (maxRpm >= 8000) ? 0: maxRpm + 100;
-
-			coolantTemp = (coolantTemp >= 130) ? -40: coolantTemp + 3;
-			maxCoolantTemp = (maxCoolantTemp >= 130) ? -40: maxCoolantTemp + 3;
-
-			oilTemp = (oilTemp >= 150) ? -40: oilTemp + 5;
-			maxOilTemp = (maxOilTemp >= 130) ? -40: maxOilTemp + 3;
-
-			speed = (speed >= 240) ? 0: speed + 12;
-			maxSpeed = (maxSpeed >= 240) ? 0: maxSpeed + 8;
-
-			oilPressure = (oilPressure >= 7) ? 0: oilPressure + 0.1;
-			maxOilPressure = (maxOilPressure >= 7) ? 0: maxOilPressure + 0.2;
-			lowOilPressureIndicator = !lowOilPressureIndicator;
-
-			fuelPressure = (fuelPressure >= 4.5) ? 0: fuelPressure + 0.1;
-			minFuelPressure = (minFuelPressure >= 4.9) ? 0: minFuelPressure + 0.2;
-
-			voltage = (voltage >= 14.7) ? 0: voltage + 0.1;
-			lowVoltageIndicator = !lowVoltageIndicator;
-
-			fuelTemp = (fuelTemp >= 50) ? -40: fuelTemp + 4;
-			iat = (iat >= 120) ? -40: oilTemp + 4;
-			afr = (afr >= 1.8) ? 0: afr + 0.03;
-
-			tps = (tps >= 100) ? 0: tps + 4;
-			celIndicator = !celIndicator;
-		}
-
-		osDelay(50);
-	}
-}
+extern xQueueHandle messageQ;
 
 /* USER CODE END 0 */
 
@@ -275,9 +245,11 @@ int main(void)
   /* creation of videoTask */
   videoTaskHandle = osThreadNew(videoTaskFunc, NULL, &videoTask_attributes);
 
+  /* creation of dataFeed */
+  dataFeedHandle = osThreadNew(DataFeedTask, NULL, &dataFeed_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
-  osThreadDef(second, DataFeedTask, osPriorityNormal, 0, 512);
-  dataFeedTaskHandle = osThreadCreate(osThread(second), NULL);
+
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
@@ -766,6 +738,79 @@ void StartDefaultTask(void *argument)
     osDelay(100);
   }
   /* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_DataFeedTask */
+/**
+* @brief Function implementing the dataFeed thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_DataFeedTask */
+void DataFeedTask(void *argument)
+{
+  /* USER CODE BEGIN DataFeedTask */
+  /* Infinite loop */
+  for(;;)
+  {
+	if(demoMode)
+	{
+		rpm = (rpm >= 8000) ? 0: rpm + 100;
+		maxRpm = (maxRpm >= 8000) ? 0: maxRpm + 100;
+
+		coolantTemp = (coolantTemp >= 130) ? -40: coolantTemp + 3;
+		maxCoolantTemp = (maxCoolantTemp >= 130) ? -40: maxCoolantTemp + 3;
+
+		oilTemp = (oilTemp >= 150) ? -40: oilTemp + 5;
+		maxOilTemp = (maxOilTemp >= 130) ? -40: maxOilTemp + 3;
+
+		speed = (speed >= 240) ? 0: speed + 12;
+		maxSpeed = (maxSpeed >= 240) ? 0: maxSpeed + 8;
+
+		oilPressure = (oilPressure >= 7) ? 0: oilPressure + 0.1;
+		maxOilPressure = (maxOilPressure >= 7) ? 0: maxOilPressure + 0.2;
+		lowOilPressureIndicator = !lowOilPressureIndicator;
+
+		fuelPressure = (fuelPressure >= 4.5) ? 0: fuelPressure + 0.1;
+		minFuelPressure = (minFuelPressure >= 4.9) ? 0: minFuelPressure + 0.2;
+
+		voltage = (voltage >= 14.7) ? 0: voltage + 0.1;
+		lowVoltageIndicator = !lowVoltageIndicator;
+
+		fuelTemp = (fuelTemp >= 50) ? -40: fuelTemp + 4;
+		iat = (iat >= 120) ? -40: oilTemp + 4;
+		afr = (afr >= 1.8) ? 0: afr + 0.03;
+
+		tps = (tps >= 100) ? 0: tps + 4;
+		celIndicator = !celIndicator;
+	}
+	display_values vals = {
+			rpm,
+			maxRpm,
+			coolantTemp,
+			maxCoolantTemp,
+			oilTemp,
+			maxOilTemp,
+			speed,
+			maxSpeed,
+			oilPressure,
+			maxOilPressure,
+			lowOilPressureIndicator,
+			fuelPressure,
+			minFuelPressure,
+			voltage,
+			lowVoltageIndicator,
+			fuelTemp,
+			iat,
+			afr,
+			tps,
+			celIndicator,
+	};
+	xQueueSend(messageQ, &vals, 0);
+
+    osDelay(50);
+  }
+  /* USER CODE END DataFeedTask */
 }
 
  /* MPU Configuration */

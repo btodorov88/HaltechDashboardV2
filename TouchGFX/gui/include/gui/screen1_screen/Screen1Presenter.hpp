@@ -27,6 +27,8 @@ public:
 
     virtual ~Screen1Presenter() {}
 
+    void setNewValue(uint8_t* newValue);
+
 private:
     Screen1Presenter();
 

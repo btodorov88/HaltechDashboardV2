@@ -16,3 +16,8 @@ void Screen1Presenter::deactivate()
 {
 
 }
+
+void Screen1Presenter::setNewValue(uint8_t* newValue)
+{
+	view.updateVal(newValue);
+}
