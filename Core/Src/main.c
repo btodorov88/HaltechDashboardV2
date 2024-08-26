@@ -26,6 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stm32746g_discovery_qspi.h>
+#include <stdbool.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,6 +95,8 @@ const osThreadAttr_t videoTask_attributes = {
   .priority = (osPriority_t) osPriorityLow,
 };
 /* USER CODE BEGIN PV */
+osThreadId dataFeedTaskHandle;
+
 static FMC_SDRAM_CommandTypeDef Command;
 /* USER CODE END PV */
 
@@ -117,6 +120,75 @@ extern void videoTaskFunc(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+static const bool demoMode = true;
+
+static int rpm = 0;
+static int maxRpm = 0;
+
+static int coolantTemp = 0;
+static int maxCoolantTemp = 0;
+
+static int oilTemp = 0;
+static int maxOilTemp = 0;
+
+static int speed = 0;
+static int maxSpeed = 0;
+
+static float oilPressure = 0;
+static float maxOilPressure = 0;
+static bool lowOilPressureIndicator = true;
+
+static float fuelPressure = 0;
+static float minFuelPressure = 0;
+
+static int voltage = 0;
+static bool lowVoltageIndicator = true;
+
+static int fuelTemp = 0;
+static int iat = 0;
+static float afr = 0.0f;
+static int tps = 0;
+static bool celIndicator = true;
+
+void DataFeedTask(void const* arg)
+{
+	while(1)
+	{
+		if(demoMode)
+		{
+			rpm = (rpm >= 8000) ? 0: rpm + 100;
+			maxRpm = (maxRpm >= 8000) ? 0: maxRpm + 100;
+
+			coolantTemp = (coolantTemp >= 130) ? -40: coolantTemp + 3;
+			maxCoolantTemp = (maxCoolantTemp >= 130) ? -40: maxCoolantTemp + 3;
+
+			oilTemp = (oilTemp >= 150) ? -40: oilTemp + 5;
+			maxOilTemp = (maxOilTemp >= 130) ? -40: maxOilTemp + 3;
+
+			speed = (speed >= 240) ? 0: speed + 12;
+			maxSpeed = (maxSpeed >= 240) ? 0: maxSpeed + 8;
+
+			oilPressure = (oilPressure >= 7) ? 0: oilPressure + 0.1;
+			maxOilPressure = (maxOilPressure >= 7) ? 0: maxOilPressure + 0.2;
+			lowOilPressureIndicator = !lowOilPressureIndicator;
+
+			fuelPressure = (fuelPressure >= 4.5) ? 0: fuelPressure + 0.1;
+			minFuelPressure = (minFuelPressure >= 4.9) ? 0: minFuelPressure + 0.2;
+
+			voltage = (voltage >= 14.7) ? 0: voltage + 0.1;
+			lowVoltageIndicator = !lowVoltageIndicator;
+
+			fuelTemp = (fuelTemp >= 50) ? -40: fuelTemp + 4;
+			iat = (iat >= 120) ? -40: oilTemp + 4;
+			afr = (afr >= 1.8) ? 0: afr + 0.03;
+
+			tps = (tps >= 100) ? 0: tps + 4;
+			celIndicator = !celIndicator;
+		}
+
+		osDelay(50);
+	}
+}
 
 /* USER CODE END 0 */
 
@@ -204,7 +276,8 @@ int main(void)
   videoTaskHandle = osThreadNew(videoTaskFunc, NULL, &videoTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
+  osThreadDef(second, DataFeedTask, osPriorityNormal, 0, 512);
+  dataFeedTaskHandle = osThreadCreate(osThread(second), NULL);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
