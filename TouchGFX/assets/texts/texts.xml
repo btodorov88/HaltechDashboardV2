@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.24.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1">
+      <Text Id="ResourceId1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_JNTP" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">2.3</Translation>
+      </Text>
+      <Text Id="__SingleUse_2YTK" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">3.4</Translation>
+      </Text>
+      <Text Id="__SingleUse_NSPF" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">184</Translation>
+      </Text>
+      <Text Id="__SingleUse_OEDE" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">8430</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z8EG" Alignment="Left" TypographyId="MaxLabels">
+        <Translation Language="GB">Vmax</Translation>
+      </Text>
+      <Text Id="__SingleUse_DGFA" Alignment="Left" TypographyId="MaxLabels">
+        <Translation Language="GB">Max RPM</Translation>
+      </Text>
+      <Text Id="__SingleUse_OX3H" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Oil Pressure</Translation>
+      </Text>
+      <Text Id="__SingleUse_3HY5" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Fuel Pressure</Translation>
+      </Text>
+      <Text Id="__SingleUse_9L87" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Voltage</Translation>
+      </Text>
+      <Text Id="__SingleUse_G8EW" Alignment="Right" TypographyId="IndicatorValues">
+        <Translation Language="GB">4.8</Translation>
+      </Text>
+      <Text Id="__SingleUse_1DHA" Alignment="Right" TypographyId="IndicatorValues">
+        <Translation Language="GB">3.9</Translation>
+      </Text>
+      <Text Id="__SingleUse_VUV5" Alignment="Center" TypographyId="IndicatorValues">
+        <Translation Language="GB">12.6</Translation>
+      </Text>
+      <Text Id="__SingleUse_CF1E" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">AFR</Translation>
+      </Text>
+      <Text Id="__SingleUse_C1MV" Alignment="Right" TypographyId="IndicatorValues">
+        <Translation Language="GB">0.78</Translation>
+      </Text>
+      <Text Id="__SingleUse_1B1N" Alignment="Right" TypographyId="IndicatorValues">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_AUCF" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Coolant</Translation>
+      </Text>
+      <Text Id="__SingleUse_59PD" Alignment="Center" TypographyId="IndicatorValues">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_M1UN" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Oil Temp</Translation>
+      </Text>
+      <Text Id="__SingleUse_STAH" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Air Temp</Translation>
+      </Text>
+      <Text Id="__SingleUse_S1Z9" Alignment="Center" TypographyId="IndicatorValues">
+        <Translation Language="GB">-20</Translation>
+      </Text>
+      <Text Id="__SingleUse_3LY0" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">km/h</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q2R0" Alignment="Right" TypographyId="Speed">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_SFYJ" Alignment="Left" TypographyId="GearIndicator">
+        <Translation Language="GB">7899</Translation>
+      </Text>
+      <Text Id="__SingleUse_MAAU" Alignment="Center" TypographyId="GearIndicator">
+        <Translation Language="GB">N</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="GearIndicator" Font="ARIALNB.TTF" Size="38" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="NR123456" />
+    <Typography Id="Speed" Font="ARIALNB.TTF" Size="36" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="IndicatorValues" Font="ARIALNB.TTF" Size="44" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="IndicatorLabels" Font="arialbd.ttf" Size="12" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="MaxLabels" Font="arialbd.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="MaxValues" Font="ARIALNB.TTF" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="IndicatorBorderValues" Font="ARIALNB.TTF" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+  </Typographies>
+</TextDatabase>

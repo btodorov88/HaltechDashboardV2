@@ -1,0 +1,481 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Gauge",
+            "Name": "rpmGauge",
+            "Width": 480,
+            "Height": 272,
+            "FileNameBackground": "BackgroundLargerNumber_Resized.png",
+            "RotationCenterX": 240.0,
+            "RotationCenterY": 136.0,
+            "StartAngle": -180.0,
+            "EndAngle": 100.0,
+            "RangeMax": 9000.0,
+            "InitialValue": 4500.0,
+            "Easing": "Linear",
+            "EasingOption": "In",
+            "FileNameNeedle": "Needle.png",
+            "NeedleRotationCenterX": 8.0,
+            "NeedleRotationCenterY": 134.0,
+            "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
+            "NeedleSteadyRenderingAlgorithm": "Bilinear Interpolation",
+            "ArcColor": {
+              "Red": 20,
+              "Green": 151,
+              "Blue": 197
+            },
+            "ArcCapStyle": "Butt"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "gearValue",
+            "X": 253,
+            "Y": 176,
+            "Width": 22,
+            "Height": 38,
+            "TextId": "__SingleUse_MAAU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "rpmValue",
+            "X": 286,
+            "Y": 176,
+            "Width": 68,
+            "Height": 38,
+            "TextId": "__SingleUse_SFYJ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "speedValue",
+            "X": 252,
+            "Y": 223,
+            "Width": 48,
+            "Height": 36,
+            "TextId": "__SingleUse_Q2R0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lblSpeed",
+            "X": 301,
+            "Y": 224,
+            "Width": 28,
+            "Height": 14,
+            "TextId": "__SingleUse_3LY0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtIat",
+            "X": 24,
+            "Y": 8,
+            "Width": 52,
+            "Height": 45,
+            "TextId": "__SingleUse_S1Z9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtVoltage",
+            "X": 18,
+            "Y": 134,
+            "Width": 70,
+            "Height": 45,
+            "TextId": "__SingleUse_VUV5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtOilTemp",
+            "X": 19,
+            "Y": 71,
+            "Width": 60,
+            "Height": 45,
+            "TextId": "__SingleUse_59PD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtMaxRpm",
+            "X": 66,
+            "Y": 229,
+            "Width": 56,
+            "Height": 30,
+            "TextId": "__SingleUse_OEDE",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtMaxSpeed",
+            "X": 66,
+            "Y": 199,
+            "Width": 42,
+            "Height": 30,
+            "TextId": "__SingleUse_NSPF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtFuelPress",
+            "X": 419,
+            "Y": 8,
+            "Width": 50,
+            "Height": 45,
+            "TextId": "__SingleUse_1DHA",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtCoolantTemp",
+            "X": 408,
+            "Y": 134,
+            "Width": 60,
+            "Height": 45,
+            "TextId": "__SingleUse_1B1N",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtOilPress",
+            "X": 419,
+            "Y": 71,
+            "Width": 50,
+            "Height": 45,
+            "TextId": "__SingleUse_G8EW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtWideband",
+            "X": 393,
+            "Y": 199,
+            "Width": 70,
+            "Height": 45,
+            "TextId": "__SingleUse_C1MV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lblAirTemp",
+            "X": 9,
+            "Y": 55,
+            "Width": 52,
+            "Height": 14,
+            "TextId": "__SingleUse_STAH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lblVoltage",
+            "X": 9,
+            "Y": 179,
+            "Width": 43,
+            "Height": 14,
+            "TextId": "__SingleUse_9L87",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lblMaxRpm",
+            "X": 9,
+            "Y": 247,
+            "Width": 45,
+            "Height": 10,
+            "TextId": "__SingleUse_DGFA",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lblMaxSpeed",
+            "X": 9,
+            "Y": 219,
+            "Width": 28,
+            "Height": 10,
+            "TextId": "__SingleUse_Z8EG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lblOilTemp",
+            "X": 9,
+            "Y": 117,
+            "Width": 50,
+            "Height": 14,
+            "TextId": "__SingleUse_M1UN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lblFuelPress",
+            "X": 370,
+            "Y": 55,
+            "Width": 80,
+            "Height": 14,
+            "TextId": "__SingleUse_3HY5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtMinFuelPressure",
+            "X": 395,
+            "Y": 35,
+            "Width": 20,
+            "Height": 18,
+            "TextId": "__SingleUse_2YTK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtMinOilPressure",
+            "X": 395,
+            "Y": 98,
+            "Width": 20,
+            "Height": 18,
+            "TextId": "__SingleUse_JNTP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lblCoolTemp",
+            "X": 375,
+            "Y": 179,
+            "Width": 44,
+            "Height": 14,
+            "TextId": "__SingleUse_AUCF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lblOilPress",
+            "X": 385,
+            "Y": 117,
+            "Width": 71,
+            "Height": 14,
+            "TextId": "__SingleUse_OX3H",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lblWB",
+            "X": 368,
+            "Y": 246,
+            "Width": 25,
+            "Height": 14,
+            "TextId": "__SingleUse_CF1E",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "HaltechDashV2",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommand": "make -f ../gcc/Makefile flash -j8",
+    "FlashTargetIntCommandOverride": "make -f ../gcc/Makefile intflash -j8",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7",
+    "SubFamily": "STM32F7x6",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../STM32F746G_DISCO.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts",
+      "Video"
+    ]
+  },
+  "Version": "4.24.0",
+  "CreatedBy": "4.24.0"
+}
