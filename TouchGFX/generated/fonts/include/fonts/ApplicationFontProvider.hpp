@@ -13,27 +13,25 @@ class FlashDataReader;
 
 struct Typography
 {
-    static const touchgfx::FontId DEFAULT = 0;
-    static const touchgfx::FontId GEARINDICATOR = 1;
-    static const touchgfx::FontId SPEED = 2;
-    static const touchgfx::FontId INDICATORVALUES = 3;
-    static const touchgfx::FontId INDICATORLABELS = 4;
-    static const touchgfx::FontId MAXLABELS = 5;
-    static const touchgfx::FontId MAXVALUES = 6;
-    static const touchgfx::FontId INDICATORBORDERVALUES = 7;
+    static const touchgfx::FontId GEARINDICATOR = 0;
+    static const touchgfx::FontId SPEED = 1;
+    static const touchgfx::FontId INDICATORVALUES = 2;
+    static const touchgfx::FontId INDICATORLABELS = 3;
+    static const touchgfx::FontId MAXLABELS = 4;
+    static const touchgfx::FontId MAXVALUES = 5;
+    static const touchgfx::FontId INDICATORBORDERVALUES = 6;
 };
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId DEFAULT = 0;               // verdana_20_4bpp
-    static const touchgfx::FontId GEARINDICATOR = 1;         // ARIALNB_TTF_38_4bpp
-    static const touchgfx::FontId SPEED = 2;                 // ARIALNB_TTF_36_4bpp
-    static const touchgfx::FontId INDICATORVALUES = 3;       // ARIALNB_TTF_44_4bpp
-    static const touchgfx::FontId INDICATORLABELS = 4;       // arialbd_12_4bpp
-    static const touchgfx::FontId MAXLABELS = 5;             // arialbd_10_4bpp
-    static const touchgfx::FontId MAXVALUES = 6;             // ARIALNB_TTF_30_4bpp
-    static const touchgfx::FontId INDICATORBORDERVALUES = 7; // ARIALNB_TTF_18_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 8;
+    static const touchgfx::FontId GEARINDICATOR = 0;         // ARIALNB_TTF_38_4bpp
+    static const touchgfx::FontId SPEED = 1;                 // ARIALNB_TTF_36_4bpp
+    static const touchgfx::FontId INDICATORVALUES = 2;       // ARIALNB_TTF_44_4bpp
+    static const touchgfx::FontId INDICATORLABELS = 3;       // arialbd_12_4bpp
+    static const touchgfx::FontId MAXLABELS = 4;             // arialbd_10_4bpp
+    static const touchgfx::FontId MAXVALUES = 5;             // ARIALNB_TTF_30_4bpp
+    static const touchgfx::FontId INDICATORBORDERVALUES = 6; // ARIALNB_TTF_18_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 7;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

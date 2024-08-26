@@ -149,7 +149,7 @@ static bool lowOilPressureIndicator = true;
 static float fuelPressure = 0;
 static float minFuelPressure = 0;
 
-static int voltage = 0;
+static float voltage = 0;
 static bool lowVoltageIndicator = true;
 
 static int fuelTemp = 0;
@@ -755,8 +755,8 @@ void DataFeedTask(void *argument)
   {
 	if(demoMode)
 	{
-		rpm = (rpm >= 8000) ? 0: rpm + 100;
-		maxRpm = (maxRpm >= 8000) ? 0: maxRpm + 100;
+		rpm = (rpm >= 8000) ? 0: rpm + 123;
+		maxRpm = (maxRpm >= 8000) ? 0: maxRpm + 99;
 
 		coolantTemp = (coolantTemp >= 130) ? -40: coolantTemp + 3;
 		maxCoolantTemp = (maxCoolantTemp >= 130) ? -40: maxCoolantTemp + 3;

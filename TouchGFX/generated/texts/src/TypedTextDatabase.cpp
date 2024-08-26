@@ -5,7 +5,6 @@
 #include <fonts/GeneratedFont.hpp>
 #include <texts/TypedTextDatabase.hpp>
 
-extern touchgfx::GeneratedFont& getFont_verdana_20_4bpp();
 extern touchgfx::GeneratedFont& getFont_ARIALNB_TTF_38_4bpp();
 extern touchgfx::GeneratedFont& getFont_ARIALNB_TTF_36_4bpp();
 extern touchgfx::GeneratedFont& getFont_ARIALNB_TTF_44_4bpp();
@@ -15,7 +14,6 @@ extern touchgfx::GeneratedFont& getFont_ARIALNB_TTF_30_4bpp();
 extern touchgfx::GeneratedFont& getFont_ARIALNB_TTF_18_4bpp();
 
 const touchgfx::Font* touchgfx_fonts[] = {
-    &(getFont_verdana_20_4bpp()),
     &(getFont_ARIALNB_TTF_38_4bpp()),
     &(getFont_ARIALNB_TTF_36_4bpp()),
     &(getFont_ARIALNB_TTF_44_4bpp()),
@@ -31,30 +29,43 @@ extern const touchgfx::TypedText::TypedTextData* const typedTextDatabaseArray[];
 TEXT_LOCATION_FLASH_PRAGMA
 const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 7, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 7, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
-    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 3, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 2, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 1, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR }
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 6, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR }
 };
 
 TEXT_LOCATION_FLASH_PRAGMA
@@ -91,28 +102,25 @@ void resetFont(touchgfx::FontId fontId)
     switch (fontId)
     {
     case 0:
-        touchgfx_fonts[0] = &(getFont_verdana_20_4bpp());
+        touchgfx_fonts[0] = &(getFont_ARIALNB_TTF_38_4bpp());
         break;
     case 1:
-        touchgfx_fonts[1] = &(getFont_ARIALNB_TTF_38_4bpp());
+        touchgfx_fonts[1] = &(getFont_ARIALNB_TTF_36_4bpp());
         break;
     case 2:
-        touchgfx_fonts[2] = &(getFont_ARIALNB_TTF_36_4bpp());
+        touchgfx_fonts[2] = &(getFont_ARIALNB_TTF_44_4bpp());
         break;
     case 3:
-        touchgfx_fonts[3] = &(getFont_ARIALNB_TTF_44_4bpp());
+        touchgfx_fonts[3] = &(getFont_arialbd_12_4bpp());
         break;
     case 4:
-        touchgfx_fonts[4] = &(getFont_arialbd_12_4bpp());
+        touchgfx_fonts[4] = &(getFont_arialbd_10_4bpp());
         break;
     case 5:
-        touchgfx_fonts[5] = &(getFont_arialbd_10_4bpp());
+        touchgfx_fonts[5] = &(getFont_ARIALNB_TTF_30_4bpp());
         break;
     case 6:
-        touchgfx_fonts[6] = &(getFont_ARIALNB_TTF_30_4bpp());
-        break;
-    case 7:
-        touchgfx_fonts[7] = &(getFont_ARIALNB_TTF_18_4bpp());
+        touchgfx_fonts[6] = &(getFont_ARIALNB_TTF_18_4bpp());
         break;
     }
 }

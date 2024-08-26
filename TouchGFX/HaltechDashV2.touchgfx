@@ -15,10 +15,9 @@
             "StartAngle": -180.0,
             "EndAngle": 100.0,
             "RangeMax": 9000.0,
-            "InitialValue": 4500.0,
             "Easing": "Linear",
             "EasingOption": "In",
-            "FileNameNeedle": "Needle.png",
+            "FileNameNeedle": "finalNeedle.png",
             "NeedleRotationCenterX": 8.0,
             "NeedleRotationCenterY": 134.0,
             "NeedleMovingRenderingAlgorithm": "Bilinear Interpolation",
@@ -44,7 +43,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_YEWF",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -60,7 +64,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_M9BM",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -76,7 +85,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_Z5Y3",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -108,7 +122,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_97QP",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -124,7 +143,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_J3Y2",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -140,7 +164,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_Z4DL",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -156,7 +185,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_RT4H",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -172,7 +206,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_TX8N",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -188,7 +227,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_RPM5",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -203,7 +247,12 @@
               "Red": 255,
               "Green": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_JPYF",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -218,7 +267,12 @@
               "Red": 255,
               "Green": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_SW5Y",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -234,7 +288,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_2OK1",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -346,7 +405,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_A6TU",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -362,7 +426,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_I1YB",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
           },
           {
             "Type": "TextArea",
@@ -400,7 +469,7 @@
             "Type": "TextArea",
             "Name": "lblWB",
             "X": 368,
-            "Y": 246,
+            "Y": 248,
             "Width": 25,
             "Height": 14,
             "TextId": "__SingleUse_CF1E",

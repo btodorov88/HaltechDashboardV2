@@ -4,11 +4,19 @@
 
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_ARIALNB_TTF_18_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
-    {     0, 0x002E,   3,   3,   3,   1,   4,   0,   0, 0x00 }, // period
-    {     6, 0x0032,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // two
-    {    62, 0x0033,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // three
-    {   118, 0x0034,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // four
-    {   174, 0x003F,   9,  14,  14,   0,   9,   0,   0, 0x00 }  // question
+    {     0, 0x002D,   5,   3,   7,   0,   5,   0,   0, 0x00 }, // hyphen
+    {     9, 0x002E,   3,   3,   3,   1,   4,   0,   0, 0x00 }, // period
+    {    15, 0x0030,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // zero
+    {    71, 0x0031,   5,  14,  14,   1,   8,   0,   1, 0x00 }, // one
+    {   113, 0x0032,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // two
+    {   169, 0x0033,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // three
+    {   225, 0x0034,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // four
+    {   281, 0x0035,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // five
+    {   337, 0x0036,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // six
+    {   393, 0x0037,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // seven
+    {   449, 0x0038,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // eight
+    {   505, 0x0039,   8,  14,  14,   0,   8,   0,   0, 0x00 }, // nine
+    {   561, 0x003F,   9,  14,  14,   0,   9,   0,   0, 0x00 }  // question
 };
 
 // ARIALNB_TTF_18_4bpp
@@ -26,6 +34,6 @@ touchgfx::GeneratedFont& getFont_ARIALNB_TTF_18_4bpp();
 
 touchgfx::GeneratedFont& getFont_ARIALNB_TTF_18_4bpp()
 {
-    static touchgfx::GeneratedFont ARIALNB_TTF_18_4bpp(glyphs_ARIALNB_TTF_18_4bpp, 5, 18, 18, 0, 0, 4, 1, 0, 0, unicodes_ARIALNB_TTF_18_4bpp, kerning_ARIALNB_TTF_18_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont ARIALNB_TTF_18_4bpp(glyphs_ARIALNB_TTF_18_4bpp, 13, 18, 18, 0, 0, 4, 1, 0, 0, unicodes_ARIALNB_TTF_18_4bpp, kerning_ARIALNB_TTF_18_4bpp, 63, 0, 0, 0);
     return ARIALNB_TTF_18_4bpp;
 }

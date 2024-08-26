@@ -6,10 +6,8 @@
 #include <touchgfx/hal/Types.hpp>
 #include <touchgfx/Bitmap.hpp>
 
-const uint16_t BITMAP_BACKGROUNDFULLSIZESIDEPANNELS_RESIZED_ID = 0;
-const uint16_t BITMAP_BACKGROUNDLARGERNUMBER_RESIZED_ID = 1;
-const uint16_t BITMAP_LARGERDIALRESIZED_ID = 2;
-const uint16_t BITMAP_NEEDLE_ID = 3;
+const uint16_t BITMAP_BACKGROUNDLARGERNUMBER_RESIZED_ID = 0;
+const uint16_t BITMAP_FINALNEEDLE_ID = 1;
 
 namespace BitmapDatabase
 {

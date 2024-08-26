@@ -4,18 +4,19 @@
 
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_ARIALNB_TTF_38_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
-    {     0, 0x0031,  11,  27,  27,   2,  17,   0,   1, 0x00 }, // one
-    {   162, 0x0032,  16,  27,  27,   0,  17,   0,   0, 0x00 }, // two
-    {   378, 0x0033,  15,  27,  27,   1,  17,   0,   0, 0x00 }, // three
-    {   594, 0x0034,  17,  27,  27,   0,  17,   0,   0, 0x00 }, // four
-    {   837, 0x0035,  16,  27,  27,   1,  17,   0,   0, 0x00 }, // five
-    {  1053, 0x0036,  16,  27,  27,   1,  17,   0,   0, 0x00 }, // six
-    {  1269, 0x0037,  15,  27,  27,   1,  17,   0,   0, 0x00 }, // seven
-    {  1485, 0x0038,  15,  27,  27,   1,  17,   0,   0, 0x00 }, // eight
-    {  1701, 0x0039,  15,  27,  27,   1,  17,   0,   0, 0x00 }, // nine
-    {  1917, 0x003F,  17,  27,  27,   1,  19,   0,   0, 0x00 }, // question
-    {  2160, 0x004E,  18,  27,  27,   2,  22,   0,   0, 0x00 }, // N
-    {  2403, 0x0052,  21,  27,  27,   2,  22,   0,   0, 0x00 }  // R
+    {     0, 0x0030,  15,  27,  27,   1,  17,   0,   0, 0x00 }, // zero
+    {   216, 0x0031,  11,  27,  27,   2,  17,   0,   1, 0x00 }, // one
+    {   378, 0x0032,  16,  27,  27,   0,  17,   0,   0, 0x00 }, // two
+    {   594, 0x0033,  15,  27,  27,   1,  17,   0,   0, 0x00 }, // three
+    {   810, 0x0034,  17,  27,  27,   0,  17,   0,   0, 0x00 }, // four
+    {  1053, 0x0035,  16,  27,  27,   1,  17,   0,   0, 0x00 }, // five
+    {  1269, 0x0036,  16,  27,  27,   1,  17,   0,   0, 0x00 }, // six
+    {  1485, 0x0037,  15,  27,  27,   1,  17,   0,   0, 0x00 }, // seven
+    {  1701, 0x0038,  15,  27,  27,   1,  17,   0,   0, 0x00 }, // eight
+    {  1917, 0x0039,  15,  27,  27,   1,  17,   0,   0, 0x00 }, // nine
+    {  2133, 0x003F,  17,  27,  27,   1,  19,   0,   0, 0x00 }, // question
+    {  2376, 0x004E,  18,  27,  27,   2,  22,   0,   0, 0x00 }, // N
+    {  2619, 0x0052,  21,  27,  27,   2,  22,   0,   0, 0x00 }  // R
 };
 
 // ARIALNB_TTF_38_4bpp
@@ -33,6 +34,6 @@ touchgfx::GeneratedFont& getFont_ARIALNB_TTF_38_4bpp();
 
 touchgfx::GeneratedFont& getFont_ARIALNB_TTF_38_4bpp()
 {
-    static touchgfx::GeneratedFont ARIALNB_TTF_38_4bpp(glyphs_ARIALNB_TTF_38_4bpp, 12, 38, 38, 0, 0, 4, 1, 0, 1, unicodes_ARIALNB_TTF_38_4bpp, kerning_ARIALNB_TTF_38_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont ARIALNB_TTF_38_4bpp(glyphs_ARIALNB_TTF_38_4bpp, 13, 38, 38, 0, 0, 4, 1, 0, 1, unicodes_ARIALNB_TTF_38_4bpp, kerning_ARIALNB_TTF_38_4bpp, 63, 0, 0, 0);
     return ARIALNB_TTF_38_4bpp;
 }

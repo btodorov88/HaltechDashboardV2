@@ -7,7 +7,14 @@ KEEP extern const touchgfx::GlyphNode glyphs_ARIALNB_TTF_36_4bpp[] FONT_TABLE_LO
     {     0, 0x0030,  14,  26,  26,   1,  16,   0,   0, 0x00 }, // zero
     {   182, 0x0031,  10,  26,  26,   2,  16,   0,   1, 0x00 }, // one
     {   312, 0x0032,  15,  26,  26,   0,  16,   0,   0, 0x00 }, // two
-    {   520, 0x003F,  16,  26,  26,   1,  18,   0,   0, 0x00 }  // question
+    {   520, 0x0033,  15,  26,  26,   1,  16,   0,   0, 0x00 }, // three
+    {   728, 0x0034,  16,  26,  26,   0,  16,   0,   0, 0x00 }, // four
+    {   936, 0x0035,  15,  26,  26,   1,  16,   0,   0, 0x00 }, // five
+    {  1144, 0x0036,  15,  26,  26,   1,  16,   0,   0, 0x00 }, // six
+    {  1352, 0x0037,  15,  26,  26,   1,  16,   0,   0, 0x00 }, // seven
+    {  1560, 0x0038,  15,  26,  26,   1,  16,   0,   0, 0x00 }, // eight
+    {  1768, 0x0039,  15,  26,  26,   0,  16,   0,   0, 0x00 }, // nine
+    {  1976, 0x003F,  16,  26,  26,   1,  18,   0,   0, 0x00 }  // question
 };
 
 // ARIALNB_TTF_36_4bpp
@@ -25,6 +32,6 @@ touchgfx::GeneratedFont& getFont_ARIALNB_TTF_36_4bpp();
 
 touchgfx::GeneratedFont& getFont_ARIALNB_TTF_36_4bpp()
 {
-    static touchgfx::GeneratedFont ARIALNB_TTF_36_4bpp(glyphs_ARIALNB_TTF_36_4bpp, 4, 36, 36, 0, 0, 4, 1, 0, 0, unicodes_ARIALNB_TTF_36_4bpp, kerning_ARIALNB_TTF_36_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont ARIALNB_TTF_36_4bpp(glyphs_ARIALNB_TTF_36_4bpp, 11, 36, 36, 0, 0, 4, 1, 0, 0, unicodes_ARIALNB_TTF_36_4bpp, kerning_ARIALNB_TTF_36_4bpp, 63, 0, 0, 0);
     return ARIALNB_TTF_36_4bpp;
 }

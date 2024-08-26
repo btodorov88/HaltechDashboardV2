@@ -14,13 +14,13 @@ typedef struct {
 	int maxSpeed;
 
 	float oilPressure;
-	float maxOilPressure;
+	float minOilPressure;
 	bool lowOilPressureIndicator;
 
 	float fuelPressure;
 	float minFuelPressure;
 
-	int voltage;
+	float voltage;
 	bool lowVoltageIndicator;
 
 	int fuelTemp;

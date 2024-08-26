@@ -47,8 +47,11 @@ TouchGFX/build/STM32F746-DISCO/Core/Src/main.o: Core/Src/main.c \
  LIBJPEG/App/libjpeg.h Middlewares/Third_Party/LibJPEG/include/jpeglib.h \
  LIBJPEG/Target/jconfig.h LIBJPEG/Target/jdata_conf.h \
  LIBJPEG/Target/jmorecfg.h TouchGFX/App/app_touchgfx.h \
+ Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h \
- Drivers/BSP/STM32746G-Discovery/../Components/n25q128a/n25q128a.h
+ Drivers/BSP/STM32746G-Discovery/../Components/n25q128a/n25q128a.h \
+ Core/Inc/message_types.h
 
 Core/Inc/main.h:
 
@@ -158,6 +161,12 @@ LIBJPEG/Target/jmorecfg.h:
 
 TouchGFX/App/app_touchgfx.h:
 
+Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+
+Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+
 Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h:
 
 Drivers/BSP/STM32746G-Discovery/../Components/n25q128a/n25q128a.h:
+
+Core/Inc/message_types.h:

@@ -40,6 +40,7 @@ TouchGFX/build/STM32F746-DISCO/TouchGFX/generated/gui_generated/src/common/Front
  Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  TouchGFX/gui/include/gui/model/Model.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  TouchGFX/gui/include/gui/common/FrontendHeap.hpp \
  TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp \
  Middlewares/ST/touchgfx/framework/include/common/Meta.hpp \
@@ -59,7 +60,6 @@ TouchGFX/build/STM32F746-DISCO/TouchGFX/generated/gui_generated/src/common/Front
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
@@ -67,6 +67,7 @@ TouchGFX/build/STM32F746-DISCO/TouchGFX/generated/gui_generated/src/common/Front
  Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
@@ -154,6 +155,8 @@ Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 
 TouchGFX/gui/include/gui/model/Model.hpp:
 
+Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
+
 TouchGFX/gui/include/gui/common/FrontendHeap.hpp:
 
 TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
@@ -192,8 +195,6 @@ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
 
-Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
-
 Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp:
@@ -207,6 +208,8 @@ Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformat
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 
