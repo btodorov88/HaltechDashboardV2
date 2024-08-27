@@ -22,13 +22,13 @@
 #include "cmsis_os.h"
 #include "libjpeg.h"
 #include "app_touchgfx.h"
-#include "queue.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stm32746g_discovery_qspi.h>
 #include <stdbool.h>
 #include <message_types.h>
+#include "queue.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -58,10 +58,12 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+CAN_RxHeaderTypeDef RxHeader;
+uint8_t RxData[8];
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+CAN_HandleTypeDef hcan1;
 
 CRC_HandleTypeDef hcrc;
 
@@ -117,6 +119,7 @@ static void MX_FMC_Init(void);
 static void MX_I2C3_Init(void);
 static void MX_LTDC_Init(void);
 static void MX_QUADSPI_Init(void);
+static void MX_CAN1_Init(void);
 void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
 extern void videoTaskFunc(void *argument);
@@ -128,7 +131,7 @@ void DataFeedTask(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-static const bool demoMode = true;
+static const bool demoMode = false;
 
 static int rpm = 0;
 static int maxRpm = 0;
@@ -213,6 +216,7 @@ int main(void)
   MX_LTDC_Init();
   MX_QUADSPI_Init();
   MX_LIBJPEG_Init();
+  MX_CAN1_Init();
   MX_TouchGFX_Init();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
@@ -326,6 +330,69 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief CAN1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_CAN1_Init(void)
+{
+
+  /* USER CODE BEGIN CAN1_Init 0 */
+	CAN_FilterTypeDef sFilterConfig;
+  /* USER CODE END CAN1_Init 0 */
+
+  /* USER CODE BEGIN CAN1_Init 1 */
+
+  /* USER CODE END CAN1_Init 1 */
+  hcan1.Instance = CAN1;
+  hcan1.Init.Prescaler = 5;
+  hcan1.Init.Mode = CAN_MODE_NORMAL;
+  hcan1.Init.SyncJumpWidth = CAN_SJW_1TQ;
+  hcan1.Init.TimeSeg1 = CAN_BS1_8TQ;
+  hcan1.Init.TimeSeg2 = CAN_BS2_1TQ;
+  hcan1.Init.TimeTriggeredMode = DISABLE;
+  hcan1.Init.AutoBusOff = DISABLE;
+  hcan1.Init.AutoWakeUp = DISABLE;
+  hcan1.Init.AutoRetransmission = DISABLE;
+  hcan1.Init.ReceiveFifoLocked = DISABLE;
+  hcan1.Init.TransmitFifoPriority = DISABLE;
+  if (HAL_CAN_Init(&hcan1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN CAN1_Init 2 */
+	sFilterConfig.FilterBank = 0;
+	sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+	sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+	sFilterConfig.FilterIdHigh = 0x0000;
+	sFilterConfig.FilterIdLow = 0x0000;
+	sFilterConfig.FilterMaskIdHigh = 0x0000;
+	sFilterConfig.FilterMaskIdLow = 0x0000;
+	sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
+	sFilterConfig.FilterActivation = ENABLE;
+	sFilterConfig.SlaveStartFilterBank = 14;
+
+	if(HAL_CAN_ConfigFilter(&hcan1, &sFilterConfig) != HAL_OK){
+		/* Filter configuration Error */
+		Error_Handler();
+	}
+
+	/*##-3- Start the CAN peripheral ###########################################*/
+	if (HAL_CAN_Start(&hcan1) != HAL_OK){
+		/* Start Error */
+		Error_Handler();
+	}
+
+	/*##-4-Activate CAN RX notification #######################################*/
+	if (HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING) != HAL_OK){
+		/* Notification Error */
+		Error_Handler();
+	}
+  /* USER CODE END CAN1_Init 2 */
+
 }
 
 /**
@@ -724,6 +791,101 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+/**
+  * @brief  Rx Fifo 0 message pending callback
+  * @param  hcan: pointer to a CAN_HandleTypeDef structure that contains
+  *         the configuration information for the specified CAN.
+  * @retval None
+  */
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
+	/* Get RX message */
+	if (HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK) {
+		/* Reception Error */
+		Error_Handler();
+	}
+
+	/* Package one */
+	if ((RxHeader.StdId == 0x360) && (RxHeader.IDE == CAN_ID_STD)
+			&& (RxHeader.DLC == 8)) {
+		uint16_t rpm_in = (RxData[0] << 8) | (RxData[1] << 0);
+		uint16_t tps_in = (RxData[4] << 8) | (RxData[5] << 0);
+
+		rpm = (int) rpm_in;
+		if (rpm > maxRpm) {
+			maxRpm = rpm;
+		}
+		tps = (int) tps_in * 0.1;
+	}
+
+	if ((RxHeader.StdId == 0x361) && (RxHeader.IDE == CAN_ID_STD)
+			&& (RxHeader.DLC == 8)) {
+		uint16_t fuel_pres_in = (RxData[0] << 8) | (RxData[1] << 0);
+		uint16_t oil_pres_in = (RxData[2] << 8) | (RxData[3] << 0);
+
+		fuelPressure = (((float) fuel_pres_in) * 0.1f - 101.3) * 0.01f;
+		oilPressure = (((float) oil_pres_in) * 0.1f - 101.3) * 0.01f;
+
+		if (rpm > 700 && fuelPressure < minFuelPressure) {
+			minFuelPressure = fuelPressure;
+		}
+
+		if (rpm > 2500 && oilPressure < minOilPressure) {
+			minOilPressure = oilPressure;
+		}
+	}
+
+	if ((RxHeader.StdId == 0x368) && (RxHeader.IDE == CAN_ID_STD)
+			&& (RxHeader.DLC == 8)) {
+		uint16_t lambda_in = (RxData[0] << 8) | (RxData[1] << 0);
+		afr = ((float) lambda_in) * 0.001f;
+	}
+
+	if ((RxHeader.StdId == 0x370) && (RxHeader.IDE == CAN_ID_STD)
+			&& (RxHeader.DLC == 8)) {
+		uint16_t speed_in = (RxData[0] << 8) | (RxData[1] << 0);
+
+		speed = (int) speed_in * 0.1;
+		if (speed > maxSpeed) {
+			maxSpeed = speed;
+		}
+	}
+
+	if ((RxHeader.StdId == 0x372) && (RxHeader.IDE == CAN_ID_STD)
+			&& (RxHeader.DLC == 8)) {
+		uint16_t batt_in = (RxData[0] << 8) | (RxData[1] << 0);
+		float battery_voltage = ((float) batt_in) * 0.1f;
+		voltage = battery_voltage;
+	}
+
+	if ((RxHeader.StdId == 0x3E0) && (RxHeader.IDE == CAN_ID_STD)
+			&& (RxHeader.DLC == 8)) {
+		uint16_t clt_in = (RxData[0] << 8) | (RxData[1] << 0);
+		uint16_t iat_in = (RxData[2] << 8) | (RxData[3] << 0);
+		uint16_t fuel_tmp_in = (RxData[4] << 8) | (RxData[5] << 0);
+		uint16_t oil_tmp_in = (RxData[6] << 8) | (RxData[7] << 0);
+
+		coolantTemp = ((int) clt_in - 2731) * 0.1;
+		if (coolantTemp > maxCoolantTemp) {
+			maxCoolantTemp = coolantTemp;
+		}
+
+		iat = ((int) iat_in - 2731) * 0.1;
+
+		fuelTemp = ((int) fuel_tmp_in - 2731) * 0.1;
+
+		oilTemp = ((int) oil_tmp_in - 2731) * 0.1;
+		if (oilTemp > maxOilTemp) {
+			maxOilTemp = oilTemp;
+		}
+	}
+
+	if ((RxHeader.StdId == 0x3E4) && (RxHeader.IDE == CAN_ID_STD)
+			&& (RxHeader.DLC == 8)) {
+		lowOilPressureIndicator = (RxData[1] >> 0) & 1;
+		celIndicator = (RxData[7] >> 7) & 1;
+		lowVoltageIndicator = (RxData[7] >> 6) & 1;
+	}
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */

@@ -1,6 +1,7 @@
-C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:736:6:StartDefaultTask	8	static
-C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:754:6:DataFeedTask	152	static
-C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:283:6:SystemClock_Config	88	static
-C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:173:5:main	120	static,ignoring_inline_asm
-C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:874:6:HAL_TIM_PeriodElapsedCallback	0	static
-C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:891:6:Error_Handler	0	static
+C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:898:6:StartDefaultTask	8	static
+C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:916:6:DataFeedTask	96	static
+C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:287:6:SystemClock_Config	88	static
+C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:176:5:main	120	static,ignoring_inline_asm
+C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:800:6:HAL_CAN_RxFifo0MsgPendingCallback	32	static
+C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:1036:6:HAL_TIM_PeriodElapsedCallback	0	static
+C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:1053:6:Error_Handler	0	static
