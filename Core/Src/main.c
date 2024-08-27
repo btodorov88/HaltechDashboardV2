@@ -134,7 +134,9 @@ static int rpm = 0;
 static int maxRpm = 0;
 
 static int coolantTemp = 0;
+static bool coolantTempWarning = false;
 static int maxCoolantTemp = 0;
+static bool maxCoolentTempWarning = false;
 
 static int oilTemp = 0;
 static int maxOilTemp = 0;
@@ -143,7 +145,8 @@ static int speed = 0;
 static int maxSpeed = 0;
 
 static float oilPressure = 0;
-static float maxOilPressure = 0;
+static float minOilPressure = 0;
+static bool minOilPressureWarning = true;
 static bool lowOilPressureIndicator = true;
 
 static float fuelPressure = 0;
@@ -157,6 +160,7 @@ static int iat = 0;
 static float afr = 0.0f;
 static int tps = 0;
 static bool celIndicator = true;
+static char gear = 'N';
 
 extern xQueueHandle messageQ;
 
@@ -755,46 +759,54 @@ void DataFeedTask(void *argument)
   {
 	if(demoMode)
 	{
-		rpm = (rpm >= 8000) ? 0: rpm + 123;
-		maxRpm = (maxRpm >= 8000) ? 0: maxRpm + 99;
+		rpm = (rpm >= 8000) ? 0: rpm + 37;
+		maxRpm = (maxRpm >= 8000) ? 0: maxRpm + 23;
 
-		coolantTemp = (coolantTemp >= 130) ? -40: coolantTemp + 3;
-		maxCoolantTemp = (maxCoolantTemp >= 130) ? -40: maxCoolantTemp + 3;
+		coolantTemp = (coolantTemp >= 130) ? -40: coolantTemp + 1;
+		coolantTempWarning = coolantTemp >= 100;
+		maxCoolantTemp = (maxCoolantTemp >= 130) ? -40: maxCoolantTemp + 1;
+		maxCoolentTempWarning = maxCoolantTemp >= 100;
 
-		oilTemp = (oilTemp >= 150) ? -40: oilTemp + 5;
-		maxOilTemp = (maxOilTemp >= 130) ? -40: maxOilTemp + 3;
+		oilTemp = (oilTemp >= 150) ? -40: oilTemp + 1;
+		maxOilTemp = (maxOilTemp >= 130) ? -40: maxOilTemp + 1;
 
-		speed = (speed >= 240) ? 0: speed + 12;
-		maxSpeed = (maxSpeed >= 240) ? 0: maxSpeed + 8;
+		speed = (speed >= 240) ? 0: speed + 4;
+		maxSpeed = (maxSpeed >= 240) ? 0: maxSpeed + 2;
 
-		oilPressure = (oilPressure >= 7) ? 0: oilPressure + 0.1;
-		maxOilPressure = (maxOilPressure >= 7) ? 0: maxOilPressure + 0.2;
-		lowOilPressureIndicator = !lowOilPressureIndicator;
+		oilPressure = (oilPressure >= 7) ? 0: oilPressure + 0.05;
+		minOilPressure = (minOilPressure >= 7) ? 0: minOilPressure + 0.02;
+		minOilPressureWarning = minOilPressure < 3;
+		lowOilPressureIndicator = oilPressure < 2;
 
-		fuelPressure = (fuelPressure >= 4.5) ? 0: fuelPressure + 0.1;
-		minFuelPressure = (minFuelPressure >= 4.9) ? 0: minFuelPressure + 0.2;
+		fuelPressure = (fuelPressure >= 4.5) ? 0: fuelPressure + 0.04;
+		minFuelPressure = (minFuelPressure >= 4.9) ? 0: minFuelPressure + 0.02;
 
-		voltage = (voltage >= 14.7) ? 0: voltage + 0.1;
-		lowVoltageIndicator = !lowVoltageIndicator;
+		voltage = (voltage >= 14.7) ? 11: voltage + 0.1;
+		lowVoltageIndicator = voltage < 12;
 
 		fuelTemp = (fuelTemp >= 50) ? -40: fuelTemp + 4;
-		iat = (iat >= 120) ? -40: oilTemp + 4;
+		iat = (iat >= 90) ? -40: iat + 1;
 		afr = (afr >= 1.8) ? 0: afr + 0.03;
 
-		tps = (tps >= 100) ? 0: tps + 4;
+		tps = (tps >= 100) ? 0: tps + 1;
 		celIndicator = !celIndicator;
+
+		gear = (gear == 'N') ? 'R':'N';
 	}
 	display_values vals = {
 			rpm,
 			maxRpm,
 			coolantTemp,
+			coolantTempWarning,
 			maxCoolantTemp,
+			maxCoolentTempWarning,
 			oilTemp,
 			maxOilTemp,
 			speed,
 			maxSpeed,
 			oilPressure,
-			maxOilPressure,
+			minOilPressure,
+			minOilPressureWarning,
 			lowOilPressureIndicator,
 			fuelPressure,
 			minFuelPressure,
@@ -805,10 +817,11 @@ void DataFeedTask(void *argument)
 			afr,
 			tps,
 			celIndicator,
+			gear
 	};
 	xQueueSend(messageQ, &vals, 0);
 
-    osDelay(50);
+    osDelay(40);
   }
   /* USER CODE END DataFeedTask */
 }

@@ -14,6 +14,7 @@ public:
 
     void updateVal(uint8_t* newValue);
 protected:
+    bool compare_float(float x, float y, float epsilon = 0.1f);
 };
 
 #endif // SCREEN1VIEW_HPP

@@ -480,6 +480,24 @@
               "Blue": 255
             },
             "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "oilPressureLight",
+            "X": 216,
+            "Y": 60,
+            "Width": 55,
+            "Height": 44,
+            "RelativeFilename": "oilLight.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "celLight",
+            "X": 268,
+            "Y": 108,
+            "Width": 45,
+            "Height": 36,
+            "RelativeFilename": "celLight.png"
           }
         ],
         "Interactions": []

@@ -719,9 +719,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_BackgroundLargerNumber_Resized.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_celLight.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_celLight.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_finalNeedle.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_finalNeedle.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_oilLight.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_oilLight.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/LanguageGb.cpp</name>

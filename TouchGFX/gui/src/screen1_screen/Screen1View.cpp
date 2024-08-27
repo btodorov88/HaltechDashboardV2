@@ -1,6 +1,12 @@
 #include <gui/screen1_screen/Screen1View.hpp>
 #include <message_types.h>
+#include <touchgfx/Color.hpp>
 
+static display_values current = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+
+static colortype RED = touchgfx::Color::getColorFromRGB(255, 0, 0);
+static colortype YELLOW = touchgfx::Color::getColorFromRGB(255, 255, 0);
+static colortype WHITE = touchgfx::Color::getColorFromRGB(255, 255, 255);
 
 Screen1View::Screen1View()
 {
@@ -21,42 +27,141 @@ void Screen1View::updateVal(uint8_t* newValue)
 {
 	display_values* values = (display_values*) newValue;
 
-	rpmGauge.setValue(values->rpm);
-	rpmGauge.invalidate();
+	if(values->rpm != current.rpm)
+	{
+		rpmGauge.setValue(values->rpm);
+		rpmGauge.invalidate();
 
-	touchgfx::Unicode::snprintf(rpmValueBuffer, RPMVALUE_SIZE, "%d", values->rpm);
-	rpmValue.invalidate();
+		touchgfx::Unicode::snprintf(rpmValueBuffer, RPMVALUE_SIZE, "%d", values->rpm);
+		rpmValue.invalidate();
 
-	touchgfx::Unicode::snprintf(txtMaxRpmBuffer, TXTMAXRPM_SIZE, "%d", values->maxRpm);
-	txtMaxRpm.invalidate();
+		current.rpm = values->rpm;
+	}
 
-	touchgfx::Unicode::snprintf(txtCoolantTempBuffer, TXTCOOLANTTEMP_SIZE, "%d", values->coolantTemp);
-	txtCoolantTemp.invalidate();
+	if(values->maxRpm != current.maxRpm)
+	{
+		touchgfx::Unicode::snprintf(txtMaxRpmBuffer, TXTMAXRPM_SIZE, "%d", values->maxRpm);
+		txtMaxRpm.invalidate();
+		current.maxRpm = values->maxRpm;
+	}
 
-	touchgfx::Unicode::snprintf(speedValueBuffer, SPEEDVALUE_SIZE, "%d", values->speed);
-	speedValue.invalidate();
-	touchgfx::Unicode::snprintf(txtMaxSpeedBuffer, TXTMAXSPEED_SIZE, "%d", values->maxSpeed);
-	txtMaxSpeed.invalidate();
+	if(values->coolantTemp != current.coolantTemp)
+	{
+		touchgfx::Unicode::snprintf(txtCoolantTempBuffer, TXTCOOLANTTEMP_SIZE, "%d", values->coolantTemp);
+		if(values->coolantTempWarning){
+			txtCoolantTemp.setColor(RED);
+		} else {
+			txtCoolantTemp.setColor(YELLOW);
+		}
+		txtCoolantTemp.invalidate();
+		current.coolantTemp = values->coolantTemp;
+	}
 
-	touchgfx::Unicode::snprintf(txtOilTempBuffer, TXTOILTEMP_SIZE, "%d", values->oilTemp);
-	txtOilTemp.invalidate();
-	touchgfx::Unicode::snprintfFloat(txtOilPressBuffer, TXTOILPRESS_SIZE, "%.1f", values->oilPressure);
-	txtOilPress.invalidate();
-	touchgfx::Unicode::snprintfFloat(txtMinOilPressureBuffer, TXTMINOILPRESSURE_SIZE, "%.1f", values->minOilPressure);
-	txtMinOilPressure.invalidate();
+	if(values->speed != current.speed)
+	{
+		touchgfx::Unicode::snprintf(speedValueBuffer, SPEEDVALUE_SIZE, "%d", values->speed);
+		speedValue.invalidate();
+		current.speed = values->speed;
+	}
 
-	touchgfx::Unicode::snprintfFloat(txtFuelPressBuffer, TXTFUELPRESS_SIZE, "%.1f", values->fuelPressure);
-	txtFuelPress.invalidate();
-	touchgfx::Unicode::snprintfFloat(txtMinFuelPressureBuffer, TXTMINFUELPRESSURE_SIZE, "%.1f", values->minFuelPressure);
-	txtMinFuelPressure.invalidate();
+	if(values->maxSpeed != current.maxSpeed)
+	{
+		touchgfx::Unicode::snprintf(txtMaxSpeedBuffer, TXTMAXSPEED_SIZE, "%d", values->maxSpeed);
+		txtMaxSpeed.invalidate();
+		current.maxSpeed = values->maxSpeed;
+	}
 
-	touchgfx::Unicode::snprintfFloat(txtVoltageBuffer, TXTVOLTAGE_SIZE, "%.1f", values->voltage);
-	txtVoltage.invalidate();
+	if(values->oilTemp != current.oilTemp)
+	{
+		touchgfx::Unicode::snprintf(txtOilTempBuffer, TXTOILTEMP_SIZE, "%d", values->oilTemp);
+		txtOilTemp.invalidate();
+		current.oilTemp = values->oilTemp;
+	}
 
-	touchgfx::Unicode::snprintfFloat(txtWidebandBuffer, TXTWIDEBAND_SIZE, "%.2f", values->afr);
-	txtWideband.invalidate();
+	if(!compare_float(values->oilPressure, current.oilPressure)){
+		touchgfx::Unicode::snprintfFloat(txtOilPressBuffer, TXTOILPRESS_SIZE, "%.1f", values->oilPressure);
+		txtOilPress.invalidate();
+		current.oilPressure = values->oilPressure;
+	}
+	if(!compare_float(values->minOilPressure, current.minOilPressure)){
+		touchgfx::Unicode::snprintfFloat(txtMinOilPressureBuffer, TXTMINOILPRESSURE_SIZE, "%.1f", values->minOilPressure);
+		if(values->minOilPressureWarning){
+			txtMinOilPressure.setColor(RED);
+		} else {
+			txtMinOilPressure.setColor(YELLOW);
+		}
+		txtMinOilPressure.invalidate();
+		current.minOilPressure = values->minOilPressure;
+	}
 
-	touchgfx::Unicode::snprintf(txtIatBuffer, TXTIAT_SIZE, "%d", values->iat);
-	txtIat.invalidate();
+	if(!compare_float(values->fuelPressure, current.fuelPressure)){
+		touchgfx::Unicode::snprintfFloat(txtFuelPressBuffer, TXTFUELPRESS_SIZE, "%.1f", values->fuelPressure);
+		txtFuelPress.invalidate();
+		current.fuelPressure = values->fuelPressure;
+	}
+	if(!compare_float(values->minFuelPressure, current.minFuelPressure)){
+		touchgfx::Unicode::snprintfFloat(txtMinFuelPressureBuffer, TXTMINFUELPRESSURE_SIZE, "%.1f", values->minFuelPressure);
+		txtMinFuelPressure.invalidate();
+		current.minFuelPressure = values->minFuelPressure;
+	}
 
+	if(!compare_float(values->voltage, current.voltage)){
+		touchgfx::Unicode::snprintfFloat(txtVoltageBuffer, TXTVOLTAGE_SIZE, "%.1f", values->voltage);
+		txtVoltage.invalidate();
+		current.voltage = values->voltage;
+	}
+
+	if(!compare_float(values->afr, current.afr, 0.01f)){
+		touchgfx::Unicode::snprintfFloat(txtWidebandBuffer, TXTWIDEBAND_SIZE, "%.2f", values->afr);
+		txtWideband.invalidate();
+		current.afr = values->afr;
+	}
+
+	if(values->iat != current.iat)
+	{
+		touchgfx::Unicode::snprintf(txtIatBuffer, TXTIAT_SIZE, "%d", values->iat);
+		txtIat.invalidate();
+		current.iat = values->iat;
+	}
+
+	if(values->gear != current.gear)
+	{
+		touchgfx::Unicode::snprintf(gearValueBuffer, GEARVALUE_SIZE, "%c", values->gear);
+		gearValue.invalidate();
+		current.gear = values->gear;
+	}
+
+	if(values->lowVoltageIndicator != current.lowVoltageIndicator){
+		if(values->lowVoltageIndicator){
+			txtVoltage.setColor(RED);
+		} else {
+			txtVoltage.setColor(WHITE);
+		}
+		txtVoltage.invalidate();
+		current.lowVoltageIndicator = values->lowVoltageIndicator;
+	}
+
+	if(values->celIndicator != current.celIndicator){
+		celLight.setVisible(values->celIndicator);
+		celLight.invalidate();
+		current.celIndicator = values->celIndicator;
+	}
+
+	if(values->lowOilPressureIndicator != current.lowOilPressureIndicator){
+		if(values->lowOilPressureIndicator){
+			txtOilPress.setColor(RED);
+		} else {
+			txtOilPress.setColor(YELLOW);
+		}
+		txtOilPress.invalidate();
+		oilPressureLight.setVisible(values->lowOilPressureIndicator);
+		oilPressureLight.invalidate();
+		current.lowOilPressureIndicator = values->lowOilPressureIndicator;
+	}
+}
+
+bool Screen1View::compare_float(float x, float y, float epsilon){
+	if(abs(x - y) < epsilon)
+		return true; //they are same
+	return false; //they are not same
 }

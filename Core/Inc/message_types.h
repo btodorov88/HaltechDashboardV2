@@ -5,7 +5,9 @@ typedef struct {
 	int maxRpm;
 
 	int coolantTemp;
+	bool coolantTempWarning;
 	int maxCoolantTemp;
+	bool maxCoolentTempWarning;
 
 	int oilTemp;
 	int maxOilTemp;
@@ -15,6 +17,7 @@ typedef struct {
 
 	float oilPressure;
 	float minOilPressure;
+	bool minOilPressureWarning;
 	bool lowOilPressureIndicator;
 
 	float fuelPressure;
@@ -28,4 +31,5 @@ typedef struct {
 	float afr;
 	int tps;
 	bool celIndicator;
+	char gear;
 } display_values;

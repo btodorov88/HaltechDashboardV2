@@ -7,7 +7,9 @@
 #include <touchgfx/Bitmap.hpp>
 
 const uint16_t BITMAP_BACKGROUNDLARGERNUMBER_RESIZED_ID = 0;
-const uint16_t BITMAP_FINALNEEDLE_ID = 1;
+const uint16_t BITMAP_CELLIGHT_ID = 1;
+const uint16_t BITMAP_FINALNEEDLE_ID = 2;
+const uint16_t BITMAP_OILLIGHT_ID = 3;
 
 namespace BitmapDatabase
 {

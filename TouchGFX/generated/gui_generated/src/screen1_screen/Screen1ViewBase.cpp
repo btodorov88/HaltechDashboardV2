@@ -208,6 +208,14 @@ Screen1ViewBase::Screen1ViewBase()
     lblWB.setLinespacing(0);
     lblWB.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CF1E));
     add(lblWB);
+
+    oilPressureLight.setXY(216, 60);
+    oilPressureLight.setBitmap(touchgfx::Bitmap(BITMAP_OILLIGHT_ID));
+    add(oilPressureLight);
+
+    celLight.setXY(268, 108);
+    celLight.setBitmap(touchgfx::Bitmap(BITMAP_CELLIGHT_ID));
+    add(celLight);
 }
 
 Screen1ViewBase::~Screen1ViewBase()

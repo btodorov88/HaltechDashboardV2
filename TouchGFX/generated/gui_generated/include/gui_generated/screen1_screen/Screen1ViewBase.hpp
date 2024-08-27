@@ -11,6 +11,7 @@
 #include <touchgfx/widgets/Gauge.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -53,6 +54,8 @@ protected:
     touchgfx::TextArea lblCoolTemp;
     touchgfx::TextArea lblOilPress;
     touchgfx::TextArea lblWB;
+    touchgfx::Image oilPressureLight;
+    touchgfx::Image celLight;
 
     /*
      * Wildcard Buffers
