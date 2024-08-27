@@ -203,7 +203,7 @@ Screen1ViewBase::Screen1ViewBase()
     lblOilPress.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OX3H));
     add(lblOilPress);
 
-    lblWB.setXY(368, 248);
+    lblWB.setXY(366, 245);
     lblWB.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     lblWB.setLinespacing(0);
     lblWB.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CF1E));

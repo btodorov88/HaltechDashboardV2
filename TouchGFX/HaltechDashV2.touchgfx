@@ -468,8 +468,8 @@
           {
             "Type": "TextArea",
             "Name": "lblWB",
-            "X": 368,
-            "Y": 248,
+            "X": 366,
+            "Y": 245,
             "Width": 25,
             "Height": 14,
             "TextId": "__SingleUse_CF1E",
