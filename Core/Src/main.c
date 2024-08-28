@@ -131,7 +131,7 @@ void DataFeedTask(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-static const bool demoMode = false;
+static const bool demoMode = true;
 
 static int rpm = 0;
 static int maxRpm = 0;

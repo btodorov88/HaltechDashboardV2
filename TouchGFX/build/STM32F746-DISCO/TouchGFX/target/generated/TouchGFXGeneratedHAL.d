@@ -73,18 +73,18 @@ TouchGFX/build/STM32F746-DISCO/TouchGFX/target/generated/TouchGFXGeneratedHAL.o:
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp \
+ Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterARGB8888.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888LinearGradient.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp \
- Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565LinearGradient.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
@@ -123,6 +123,7 @@ TouchGFX/build/STM32F746-DISCO/TouchGFX/target/generated/TouchGFXGeneratedHAL.o:
  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h \
  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h \
  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h \
+ Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h \
  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h \
  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h \
  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h \
@@ -286,11 +287,19 @@ Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:
+
+Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
+
 Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp:
 
@@ -301,14 +310,6 @@ Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterARGB8888.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888LinearGradient.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:
-
-Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565LinearGradient.hpp:
 
@@ -389,6 +390,8 @@ Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h:
 Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h:
 
 Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h:
+
+Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h:
 
 Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h:
 

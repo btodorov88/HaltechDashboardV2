@@ -2,7 +2,8 @@
 #include <message_types.h>
 #include <touchgfx/Color.hpp>
 
-static display_values current = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+static display_values current = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'N'};
+static int shiftLightSwitch = 0;
 
 static colortype RED = touchgfx::Color::getColorFromRGB(255, 0, 0);
 static colortype YELLOW = touchgfx::Color::getColorFromRGB(255, 255, 0);
@@ -158,6 +159,20 @@ void Screen1View::updateVal(uint8_t* newValue)
 		oilPressureLight.invalidate();
 		current.lowOilPressureIndicator = values->lowOilPressureIndicator;
 	}
+
+	float rpmDelta = 7800 - current.rpm;
+	rpmDelta = (rpmDelta < 0)? 0: rpmDelta;
+	if(rpmDelta < 200){
+		shiftIndicator.setRadius(280);
+		shiftIndicator.setVisible(shiftLightSwitch<2);
+		shiftLightSwitch = (shiftLightSwitch < 3 ) ? shiftLightSwitch + 1: 0;
+	} else if(rpmDelta < 500){
+		shiftIndicator.setRadius(280*(1 - rpmDelta/500));
+		shiftIndicator.setVisible(true);
+	} else {
+		shiftIndicator.setVisible(false);
+	}
+	shiftIndicator.invalidate();
 }
 
 bool Screen1View::compare_float(float x, float y, float epsilon){

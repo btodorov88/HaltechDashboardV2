@@ -1,5 +1,5 @@
 C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:898:6:StartDefaultTask	1
-C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:916:6:DataFeedTask	1
+C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:916:6:DataFeedTask	18
 C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:287:6:SystemClock_Config	1
 C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:176:5:main	3
 C:/TouchGFXProjects/HaltechDashV2/Core/Src/main.c:800:6:HAL_CAN_RxFifo0MsgPendingCallback	30

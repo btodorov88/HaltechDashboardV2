@@ -1,11 +1,11 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:21:6:virtual void Screen1View::tearDownScreen()	1
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:22:6:virtual void Screen1View::tearDownScreen()	1
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:11:13:Screen1View::~Screen1View()	1
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:11:13:virtual Screen1View::~Screen1View()	1
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:11:1:Screen1View::Screen1View()	1
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:163:6:bool Screen1View::compare_float(float, float, float)	2
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:167:1:cpp)	1
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:16:6:virtual void Screen1View::setupScreen()	1
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:26:6:void Screen1View::updateVal(uint8_t*)	28
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:12:1:Screen1View::Screen1View()	1
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:178:6:bool Screen1View::compare_float(float, float, float)	2
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:182:1:cpp)	1
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:17:6:virtual void Screen1View::setupScreen()	1
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:27:6:void Screen1View::updateVal(uint8_t*)	32

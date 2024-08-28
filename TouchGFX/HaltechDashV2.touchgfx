@@ -3,6 +3,7 @@
     "Screens": [
       {
         "Name": "Screen1",
+        "CanvasBufferSize": 7200,
         "Components": [
           {
             "Type": "Gauge",
@@ -498,6 +499,22 @@
             "Width": 45,
             "Height": 36,
             "RelativeFilename": "celLight.png"
+          },
+          {
+            "Type": "Circle",
+            "Name": "shiftIndicator",
+            "Width": 480,
+            "Height": 272,
+            "Visible": false,
+            "Color": {
+              "Green": 255
+            },
+            "CenterX": 240.0,
+            "CenterY": 136.0,
+            "Radius": 280.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt",
+            "Alpha": 132
           }
         ],
         "Interactions": []

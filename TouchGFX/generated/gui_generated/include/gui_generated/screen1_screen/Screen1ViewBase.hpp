@@ -12,6 +12,8 @@
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/canvas/Circle.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -56,6 +58,8 @@ protected:
     touchgfx::TextArea lblWB;
     touchgfx::Image oilPressureLight;
     touchgfx::Image celLight;
+    touchgfx::Circle shiftIndicator;
+    touchgfx::PainterRGB565 shiftIndicatorPainter;
 
     /*
      * Wildcard Buffers
@@ -90,6 +94,12 @@ protected:
     touchgfx::Unicode::UnicodeChar txtMinOilPressureBuffer[TXTMINOILPRESSURE_SIZE];
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 
