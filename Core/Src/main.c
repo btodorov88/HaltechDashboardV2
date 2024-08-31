@@ -131,7 +131,7 @@ void DataFeedTask(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-static const bool demoMode = true;
+static const bool demoMode = false;
 
 static int rpm = 0;
 static int maxRpm = 0;
@@ -148,12 +148,12 @@ static int speed = 0;
 static int maxSpeed = 0;
 
 static float oilPressure = 0;
-static float minOilPressure = 0;
+static float minOilPressure = -1;
 static bool minOilPressureWarning = true;
 static bool lowOilPressureIndicator = true;
 
 static float fuelPressure = 0;
-static float minFuelPressure = 0;
+static float minFuelPressure = -1;
 
 static float voltage = 0;
 static bool lowVoltageIndicator = true;
@@ -825,11 +825,11 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		fuelPressure = (((float) fuel_pres_in) * 0.1f - 101.3) * 0.01f;
 		oilPressure = (((float) oil_pres_in) * 0.1f - 101.3) * 0.01f;
 
-		if (rpm > 700 && fuelPressure < minFuelPressure) {
+		if (rpm > 700 && (minFuelPressure < 0 || fuelPressure < minFuelPressure)) {
 			minFuelPressure = fuelPressure;
 		}
 
-		if (rpm > 2500 && oilPressure < minOilPressure) {
+		if (rpm > 2500 && (minOilPressure < 0 || oilPressure < minOilPressure)) {
 			minOilPressure = oilPressure;
 		}
 	}
@@ -876,6 +876,39 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		oilTemp = ((int) oil_tmp_in - 2731) * 0.1;
 		if (oilTemp > maxOilTemp) {
 			maxOilTemp = oilTemp;
+		}
+	}
+
+	if ((RxHeader.StdId == 0x370) && (RxHeader.IDE == CAN_ID_STD)
+				&& (RxHeader.DLC == 8)) {
+		int8_t gear_in = RxData[3];
+
+		switch (gear_in) {
+		  case -1:
+		    gear = 'R';
+		    break;
+		  case -3:
+		  case 0:
+		    gear = 'N';
+		    break;
+		  case 1:
+		    gear = '1';
+		    break;
+		  case 2:
+			  gear = '2';
+		    break;
+		  case 3:
+			  gear = '3';
+		    break;
+		  case 4:
+			  gear = '4';
+		    break;
+		  case 5:
+			  gear = '5';
+		    break;
+		  case 6:
+			  gear = '6';
+		    break;
 		}
 	}
 
@@ -936,12 +969,12 @@ void DataFeedTask(void *argument)
 		maxSpeed = (maxSpeed >= 240) ? 0: maxSpeed + 2;
 
 		oilPressure = (oilPressure >= 7) ? 0: oilPressure + 0.05;
-		minOilPressure = (minOilPressure >= 7) ? 0: minOilPressure + 0.02;
+		minOilPressure = (minOilPressure >= 7) ? -1: minOilPressure + 0.02;
 		minOilPressureWarning = minOilPressure < 3;
 		lowOilPressureIndicator = oilPressure < 2;
 
 		fuelPressure = (fuelPressure >= 4.5) ? 0: fuelPressure + 0.04;
-		minFuelPressure = (minFuelPressure >= 4.9) ? 0: minFuelPressure + 0.02;
+		minFuelPressure = (minFuelPressure >= 4.9) ? -1: minFuelPressure + 0.02;
 
 		voltage = (voltage >= 14.7) ? 11: voltage + 0.1;
 		lowVoltageIndicator = voltage < 12;

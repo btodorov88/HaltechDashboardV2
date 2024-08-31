@@ -86,6 +86,12 @@ void Screen1View::updateVal(uint8_t* newValue)
 	}
 	if(!compare_float(values->minOilPressure, current.minOilPressure)){
 		touchgfx::Unicode::snprintfFloat(txtMinOilPressureBuffer, TXTMINOILPRESSURE_SIZE, "%.1f", values->minOilPressure);
+		if(values->minOilPressure < 0){
+			txtMinOilPressure.setVisible(false);
+		} else {
+			txtMinOilPressure.setVisible(true);
+		}
+
 		if(values->minOilPressureWarning){
 			txtMinOilPressure.setColor(RED);
 		} else {
@@ -102,6 +108,11 @@ void Screen1View::updateVal(uint8_t* newValue)
 	}
 	if(!compare_float(values->minFuelPressure, current.minFuelPressure)){
 		touchgfx::Unicode::snprintfFloat(txtMinFuelPressureBuffer, TXTMINFUELPRESSURE_SIZE, "%.1f", values->minFuelPressure);
+		if(values->minFuelPressure < 0){
+			txtMinFuelPressure.setVisible(false);
+		} else {
+			txtMinFuelPressure.setVisible(true);
+		}
 		txtMinFuelPressure.invalidate();
 		current.minFuelPressure = values->minFuelPressure;
 	}
