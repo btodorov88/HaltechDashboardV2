@@ -39,6 +39,13 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
+#define MIN_OIL_PRESSURE_THRESHOLD 3
+#define MIN_FUEL_PRESSURE_RPM_BOUND 700 // Values measured when the engine is bellow the specified RPMs are ignored in the min pressure counter
+#define MIN_OIL_PRESSURE_RPM_BOUND 2500
+#define GEAR_SHIFT_RPM 7600
+#define GEAR_SHIFT_LAMP_RPM_DURATION 300 // RPMs before GEAR_SHIFT_RPM to start the gear shift indicator logic
+
+
 #define REFRESH_COUNT        1835
 
 #define SDRAM_TIMEOUT                            ((uint32_t)0xFFFF)
@@ -164,6 +171,8 @@ static float afr = 0.0f;
 static int tps = 0;
 static bool celIndicator = true;
 static char gear = 'N';
+
+static int shiftLampPersentage = 0; // From 0 to 100% - how intense the gear shift lamp should be
 
 extern xQueueHandle messageQ;
 
@@ -815,6 +824,12 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 			maxRpm = rpm;
 		}
 		tps = (int) tps_in * 0.1;
+
+		// Gear shift lamp
+		int rpmDelta = GEAR_SHIFT_RPM - rpm;
+		rpmDelta = (rpmDelta < 0)? 0: rpmDelta;
+		shiftLampPersentage = 100 - rpmDelta*100/GEAR_SHIFT_LAMP_RPM_DURATION;
+		shiftLampPersentage = (shiftLampPersentage < 0)? 0: shiftLampPersentage;
 	}
 
 	if ((RxHeader.StdId == 0x361) && (RxHeader.IDE == CAN_ID_STD)
@@ -825,12 +840,13 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		fuelPressure = (((float) fuel_pres_in) * 0.1f - 101.3) * 0.01f;
 		oilPressure = (((float) oil_pres_in) * 0.1f - 101.3) * 0.01f;
 
-		if (rpm > 700 && (minFuelPressure < 0 || fuelPressure < minFuelPressure)) {
+		if (rpm > MIN_FUEL_PRESSURE_RPM_BOUND && (minFuelPressure < 0 || fuelPressure < minFuelPressure)) {
 			minFuelPressure = fuelPressure;
 		}
 
-		if (rpm > 2500 && (minOilPressure < 0 || oilPressure < minOilPressure)) {
+		if (rpm > MIN_OIL_PRESSURE_RPM_BOUND && (minOilPressure < 0 || oilPressure < minOilPressure)) {
 			minOilPressure = oilPressure;
+			minOilPressureWarning = (minOilPressure < MIN_OIL_PRESSURE_THRESHOLD);
 		}
 	}
 
@@ -987,6 +1003,7 @@ void DataFeedTask(void *argument)
 		celIndicator = !celIndicator;
 
 		gear = (gear == 'N') ? 'R':'N';
+		shiftLampPersentage = (shiftLampPersentage >= 180) ? -100: shiftLampPersentage + 3;
 	}
 	display_values vals = {
 			rpm,
@@ -1012,7 +1029,8 @@ void DataFeedTask(void *argument)
 			afr,
 			tps,
 			celIndicator,
-			gear
+			gear,
+			shiftLampPersentage
 	};
 	xQueueSend(messageQ, &vals, 0);
 

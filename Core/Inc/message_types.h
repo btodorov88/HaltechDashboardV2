@@ -32,4 +32,5 @@ typedef struct {
 	int tps;
 	bool celIndicator;
 	char gear;
+	int shiftLampPersentage; // From 0 to 100% - how intense the gear shift lamp should be
 } display_values;

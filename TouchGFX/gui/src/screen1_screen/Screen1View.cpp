@@ -2,12 +2,15 @@
 #include <message_types.h>
 #include <touchgfx/Color.hpp>
 
-static display_values current = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'N'};
+static display_values current = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'N',0};
 static int shiftLightSwitch = 0;
 
 static colortype RED = touchgfx::Color::getColorFromRGB(255, 0, 0);
 static colortype YELLOW = touchgfx::Color::getColorFromRGB(255, 255, 0);
 static colortype WHITE = touchgfx::Color::getColorFromRGB(255, 255, 255);
+static int SHIFT_LIGHT_ALPHA = 132;
+static int SHIFT_LIGHT_BLINK_ALPHA = 255;
+
 
 Screen1View::Screen1View()
 {
@@ -95,7 +98,7 @@ void Screen1View::updateVal(uint8_t* newValue)
 		if(values->minOilPressureWarning){
 			txtMinOilPressure.setColor(RED);
 		} else {
-			txtMinOilPressure.setColor(YELLOW);
+			txtMinOilPressure.setColor(WHITE);
 		}
 		txtMinOilPressure.invalidate();
 		current.minOilPressure = values->minOilPressure;
@@ -171,19 +174,26 @@ void Screen1View::updateVal(uint8_t* newValue)
 		current.lowOilPressureIndicator = values->lowOilPressureIndicator;
 	}
 
-	float rpmDelta = 7800 - current.rpm;
-	rpmDelta = (rpmDelta < 0)? 0: rpmDelta;
-	if(rpmDelta < 200){
+	int shiftLampPersentage = values->shiftLampPersentage;
+	if(shiftLampPersentage >= 100){
+		// 280 radius covers the whole screen
 		shiftIndicator.setRadius(280);
+		shiftIndicator.setAlpha(SHIFT_LIGHT_BLINK_ALPHA);
 		shiftIndicator.setVisible(shiftLightSwitch<2);
 		shiftLightSwitch = (shiftLightSwitch < 3 ) ? shiftLightSwitch + 1: 0;
-	} else if(rpmDelta < 500){
-		shiftIndicator.setRadius(280*(1 - rpmDelta/500));
+		shiftIndicator.invalidate();
+	} else if(shiftLampPersentage == current.shiftLampPersentage) {
+		// nothing changes in the UI
+	}else if(shiftLampPersentage > 0){
+		shiftIndicator.setRadius(280*shiftLampPersentage/100);
+		shiftIndicator.setAlpha(SHIFT_LIGHT_ALPHA);
 		shiftIndicator.setVisible(true);
+		shiftIndicator.invalidate();
 	} else {
 		shiftIndicator.setVisible(false);
+		shiftIndicator.invalidate();
 	}
-	shiftIndicator.invalidate();
+	current.shiftLampPersentage = shiftLampPersentage;
 }
 
 bool Screen1View::compare_float(float x, float y, float epsilon){
