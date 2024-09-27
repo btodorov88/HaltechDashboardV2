@@ -42,8 +42,8 @@
 #define MIN_OIL_PRESSURE_THRESHOLD 3
 #define MIN_FUEL_PRESSURE_RPM_BOUND 700 // Values measured when the engine is bellow the specified RPMs are ignored in the min pressure counter
 #define MIN_OIL_PRESSURE_RPM_BOUND 2500
-#define GEAR_SHIFT_RPM 7600
-#define GEAR_SHIFT_LAMP_RPM_DURATION 300 // RPMs before GEAR_SHIFT_RPM to start the gear shift indicator logic
+#define GEAR_SHIFT_RPM 7500
+#define GEAR_SHIFT_LAMP_RPM_DURATION 400 // RPMs before GEAR_SHIFT_RPM to start the gear shift indicator logic
 
 
 #define REFRESH_COUNT        1835
