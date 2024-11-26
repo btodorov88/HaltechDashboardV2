@@ -16,3 +16,8 @@ void StatsPresenter::deactivate()
 {
 
 }
+
+void StatsPresenter::setNewValue(uint8_t* newValue)
+{
+	view.updateVal(newValue);
+}

@@ -11,6 +11,7 @@ public:
     virtual ~StatsView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    void updateVal(uint8_t* newValue);
 protected:
 };
 

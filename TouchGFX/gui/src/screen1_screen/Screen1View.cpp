@@ -20,6 +20,8 @@ Screen1View::Screen1View()
 void Screen1View::setupScreen()
 {
     Screen1ViewBase::setupScreen();
+    // cleanup cache
+	current = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'N',0};
 }
 
 void Screen1View::tearDownScreen()

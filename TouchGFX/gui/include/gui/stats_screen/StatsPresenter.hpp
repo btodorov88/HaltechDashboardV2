@@ -27,6 +27,8 @@ public:
 
     virtual ~StatsPresenter() {}
 
+    void setNewValue(uint8_t* newValue);
+
 private:
     StatsPresenter();
 

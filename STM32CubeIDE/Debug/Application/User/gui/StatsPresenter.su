@@ -1,6 +1,6 @@
-../../TouchGFX/gui/include/gui/model/ModelListener.hpp:17:18:virtual void ModelListener::setNewValue(uint8_t*)	0	static
 ../../TouchGFX/gui/include/gui/stats_screen/StatsPresenter.hpp:28:13:StatsPresenter::~StatsPresenter()	0	static
 C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsPresenter.cpp:10:6:virtual void StatsPresenter::activate()	0	static
 ../../TouchGFX/gui/include/gui/stats_screen/StatsPresenter.hpp:28:13:virtual StatsPresenter::~StatsPresenter()	8	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsPresenter.cpp:20:6:virtual void StatsPresenter::setNewValue(uint8_t*)	0	static
 ../../TouchGFX/gui/include/gui/stats_screen/StatsPresenter.hpp:28:13:virtual void* StatsPresenter::_ZThn4_N14StatsPresenterD1Ev()	0	static
 C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsPresenter.cpp:4:1:StatsPresenter::StatsPresenter(StatsView&)	0	static
