@@ -2,13 +2,13 @@
 #include <message_types.h>
 #include <touchgfx/Color.hpp>
 
-static display_values current = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'N',0};
+static display_values current = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'N',0};
 static int shiftLightSwitch = 0;
 
 static colortype RED = touchgfx::Color::getColorFromRGB(255, 0, 0);
 static colortype YELLOW = touchgfx::Color::getColorFromRGB(255, 255, 0);
 static colortype WHITE = touchgfx::Color::getColorFromRGB(255, 255, 255);
-static int SHIFT_LIGHT_ALPHA = 132;
+static int SHIFT_LIGHT_ALPHA = 180;
 static int SHIFT_LIGHT_BLINK_ALPHA = 255;
 
 
@@ -30,6 +30,11 @@ void Screen1View::tearDownScreen()
 void Screen1View::updateVal(uint8_t* newValue)
 {
 	display_values* values = (display_values*) newValue;
+
+	if(values->activeScreen == 1)
+	{
+		changeToStatsScreen();
+	}
 
 	if(values->rpm != current.rpm)
 	{

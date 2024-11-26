@@ -241,3 +241,11 @@ void Screen1ViewBase::setupScreen()
 {
 
 }
+
+void Screen1ViewBase::changeToStatsScreen()
+{
+    //ToStats
+    //When changeToStatsScreen is called change screen to Stats
+    //Go to Stats with no screen transition
+    application().gotoStatsScreenNoTransition();
+}

@@ -398,7 +398,7 @@
             "X": 395,
             "Y": 35,
             "Width": 20,
-            "Height": 18,
+            "Height": 22,
             "TextId": "__SingleUse_2YTK",
             "TextRotation": "0",
             "Color": {
@@ -419,7 +419,7 @@
             "X": 395,
             "Y": 98,
             "Width": 20,
-            "Height": 18,
+            "Height": 22,
             "TextId": "__SingleUse_JNTP",
             "TextRotation": "0",
             "Color": {
@@ -517,7 +517,576 @@
             "Alpha": 132
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "ToStats",
+            "Trigger": {
+              "Type": "TriggerWhen",
+              "ActionCustomTypeName": "Call Screen1 changeToStatsScreen"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Stats"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "changeToStatsScreen"
+          }
+        ]
+      },
+      {
+        "Name": "Stats",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 90,
+            "Y": 19,
+            "Width": 56,
+            "Height": 30,
+            "TextId": "__SingleUse_MJS6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2",
+            "X": 100,
+            "Y": 59,
+            "Width": 42,
+            "Height": 30,
+            "TextId": "__SingleUse_6065",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1",
+            "X": 158,
+            "Y": 119,
+            "Width": 42,
+            "Height": 30,
+            "TextId": "__SingleUse_AW0J",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1_1",
+            "X": 158,
+            "Y": 147,
+            "Width": 42,
+            "Height": 30,
+            "TextId": "__SingleUse_ZFUR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1_1_1",
+            "X": 158,
+            "Y": 203,
+            "Width": 42,
+            "Height": 30,
+            "TextId": "__SingleUse_APIY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1_1_1_1",
+            "X": 158,
+            "Y": 230,
+            "Width": 42,
+            "Height": 30,
+            "TextId": "__SingleUse_341W",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1_1_1_2",
+            "X": 348,
+            "Y": 32,
+            "Width": 42,
+            "Height": 30,
+            "TextId": "__SingleUse_1DHL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1_1_1_2_1",
+            "X": 348,
+            "Y": 64,
+            "Width": 42,
+            "Height": 30,
+            "TextId": "__SingleUse_MZIZ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1_1_1_2_1_1",
+            "X": 377,
+            "Y": 136,
+            "Width": 49,
+            "Height": 30,
+            "TextId": "__SingleUse_VTO8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1_1_1_2_1_1_1",
+            "X": 377,
+            "Y": 173,
+            "Width": 49,
+            "Height": 30,
+            "TextId": "__SingleUse_DCOQ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1_1_1_2_1_1_1_1",
+            "X": 377,
+            "Y": 203,
+            "Width": 49,
+            "Height": 30,
+            "TextId": "__SingleUse_NLYQ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2_1_1_1_2_1_1_1_1_1",
+            "X": 384,
+            "Y": 230,
+            "Width": 49,
+            "Height": 30,
+            "TextId": "__SingleUse_ET97",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1",
+            "X": 12,
+            "Y": 23,
+            "Width": 65,
+            "Height": 22,
+            "TextId": "__SingleUse_WH3E",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_2",
+            "X": 266,
+            "Y": 37,
+            "Width": 29,
+            "Height": 22,
+            "TextId": "__SingleUse_3J2E",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_2_1",
+            "X": 241,
+            "Y": 150,
+            "Width": 92,
+            "Height": 22,
+            "TextId": "__SingleUse_IFLO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1",
+            "X": 12,
+            "Y": 68,
+            "Width": 76,
+            "Height": 22,
+            "TextId": "__SingleUse_FOMG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1",
+            "X": 12,
+            "Y": 126,
+            "Width": 129,
+            "Height": 22,
+            "TextId": "__SingleUse_TS6I",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1",
+            "X": 13,
+            "Y": 150,
+            "Width": 93,
+            "Height": 22,
+            "TextId": "__SingleUse_UYNX",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1_2",
+            "X": 8,
+            "Y": 188,
+            "Width": 83,
+            "Height": 14,
+            "TextId": "__SingleUse_K4NV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1_2_1",
+            "X": 8,
+            "Y": 99,
+            "Width": 66,
+            "Height": 14,
+            "TextId": "__SingleUse_4OPD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1_2_1_1",
+            "X": 239,
+            "Y": 4,
+            "Width": 54,
+            "Height": 14,
+            "TextId": "__SingleUse_XLYU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1_2_1_1_1",
+            "X": 239,
+            "Y": 105,
+            "Width": 44,
+            "Height": 14,
+            "TextId": "__SingleUse_UP1P",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1_1",
+            "X": 12,
+            "Y": 212,
+            "Width": 19,
+            "Height": 22,
+            "TextId": "__SingleUse_WGL6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1_1_1",
+            "X": 12,
+            "Y": 237,
+            "Width": 30,
+            "Height": 22,
+            "TextId": "__SingleUse_8THG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1_1_1_1",
+            "X": 242,
+            "Y": 184,
+            "Width": 81,
+            "Height": 22,
+            "TextId": "__SingleUse_357F",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1_1_1_1_1",
+            "X": 239,
+            "Y": 212,
+            "Width": 108,
+            "Height": 22,
+            "TextId": "__SingleUse_58VU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1_1_1_1_1_2",
+            "X": 241,
+            "Y": 238,
+            "Width": 105,
+            "Height": 22,
+            "TextId": "__SingleUse_U9K5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1_1_1_1_1_1",
+            "X": 261,
+            "Y": 62,
+            "Width": 34,
+            "Height": 22,
+            "TextId": "__SingleUse_HIQX",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1",
+            "X": 9,
+            "Y": 202,
+            "Width": 217,
+            "Height": 15,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "StartY": 5.0,
+            "EndX": 200.0,
+            "EndY": 5.0,
+            "LineWidth": 3.0,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1_1",
+            "X": 9,
+            "Y": 114,
+            "Width": 217,
+            "Height": 15,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "StartY": 5.0,
+            "EndX": 200.0,
+            "EndY": 5.0,
+            "LineWidth": 3.0,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1_1_1",
+            "X": 240,
+            "Y": 18,
+            "Width": 217,
+            "Height": 15,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "StartY": 5.0,
+            "EndX": 200.0,
+            "EndY": 5.0,
+            "LineWidth": 3.0,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1_1_1_1",
+            "X": 239,
+            "Y": 129,
+            "Width": 217,
+            "Height": 15,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "StartY": 5.0,
+            "EndX": 200.0,
+            "EndY": 5.0,
+            "LineWidth": 3.0,
+            "LineEndingStyle": "Round"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ToScreen1",
+            "Trigger": {
+              "Type": "TriggerWhen",
+              "ActionCustomTypeName": "Call Stats changeToScreen1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen1"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "changeToScreen1"
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],

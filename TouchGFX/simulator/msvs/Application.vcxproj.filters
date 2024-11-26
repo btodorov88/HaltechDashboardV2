@@ -184,6 +184,18 @@
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>5610A27B-0E94-946C-736C-F02AEC3616FA</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\stats_screen">
+      <UniqueIdentifier>19C961C4-C029-8CDE-656D-843F719B22FE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\stats_screen">
+      <UniqueIdentifier>2DF238A9-D8D1-80E9-6F8C-EE7D27F47D44</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\stats_screen">
+      <UniqueIdentifier>DBA48E26-32F0-0554-8B97-51487498DF83</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\stats_screen">
+      <UniqueIdentifier>6F6A5ECF-6833-50AF-CD9A-6BFA349B5959</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -224,6 +236,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\stats_screen\StatsPresenter.cpp">
+      <Filter>Source Files\gui\stats_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\stats_screen\StatsView.cpp">
+      <Filter>Source Files\gui\stats_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\stats_screen\StatsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\stats_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -675,6 +696,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\stats_screen\StatsPresenter.hpp">
+      <Filter>Header Files\gui\stats_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\stats_screen\StatsView.hpp">
+      <Filter>Header Files\gui\stats_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\stats_screen\StatsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\stats_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

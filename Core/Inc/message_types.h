@@ -1,6 +1,7 @@
 #include <stdbool.h>
 
 typedef struct {
+	int activeScreen;
 	int rpm;
 	int maxRpm;
 

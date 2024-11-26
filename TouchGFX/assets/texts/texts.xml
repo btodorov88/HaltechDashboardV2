@@ -6,6 +6,90 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_ET97" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">12.5</Translation>
+      </Text>
+      <Text Id="__SingleUse_U9K5" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Total Run Time</Translation>
+      </Text>
+      <Text Id="__SingleUse_UP1P" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Various</Translation>
+      </Text>
+      <Text Id="__SingleUse_XLYU" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Live Data</Translation>
+      </Text>
+      <Text Id="__SingleUse_4OPD" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Max Temps</Translation>
+      </Text>
+      <Text Id="__SingleUse_K4NV" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Min Pressures</Translation>
+      </Text>
+      <Text Id="__SingleUse_NLYQ" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">12.5</Translation>
+      </Text>
+      <Text Id="__SingleUse_HIQX" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Baro</Translation>
+      </Text>
+      <Text Id="__SingleUse_DCOQ" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">12.5</Translation>
+      </Text>
+      <Text Id="__SingleUse_58VU" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Total Fuel Used</Translation>
+      </Text>
+      <Text Id="__SingleUse_VTO8" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">12.5</Translation>
+      </Text>
+      <Text Id="__SingleUse_357F" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Min Voltage</Translation>
+      </Text>
+      <Text Id="__SingleUse_MZIZ" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_IFLO" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Knock Count</Translation>
+      </Text>
+      <Text Id="__SingleUse_1DHL" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_341W" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_8THG" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Fuel</Translation>
+      </Text>
+      <Text Id="__SingleUse_3J2E" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">TPS</Translation>
+      </Text>
+      <Text Id="__SingleUse_APIY" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_WGL6" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Oil</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZFUR" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_UYNX" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Max Oil Temp</Translation>
+      </Text>
+      <Text Id="__SingleUse_AW0J" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_TS6I" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Max Coolant Temp</Translation>
+      </Text>
+      <Text Id="__SingleUse_6065" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_FOMG" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Max Speed</Translation>
+      </Text>
+      <Text Id="__SingleUse_WH3E" Alignment="Left" TypographyId="IndicatorBorderValues">
+        <Translation Language="GB">Max RPM</Translation>
+      </Text>
+      <Text Id="__SingleUse_MJS6" Alignment="Left" TypographyId="MaxValues">
+        <Translation Language="GB">7600</Translation>
+      </Text>
       <Text Id="__SingleUse_YEWF" Alignment="Left" TypographyId="GearIndicator">
         <Translation Language="GB">N</Translation>
       </Text>

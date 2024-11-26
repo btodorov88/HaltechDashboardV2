@@ -34,6 +34,7 @@ C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/screen1_s
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen1Presenter>::~View()	8	static
 C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:235:1:Screen1ViewBase::~Screen1ViewBase()	8	static
 C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:235:1:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:245:6:virtual void Screen1ViewBase::changeToStatsScreen()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static

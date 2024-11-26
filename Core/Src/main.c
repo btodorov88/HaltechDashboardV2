@@ -139,7 +139,7 @@ void DataFeedTask(void *argument);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 static const bool demoMode = false;
-
+static int activeScreen = 0;
 static int rpm = 0;
 static int maxRpm = 0;
 
@@ -813,6 +813,13 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		Error_Handler();
 	}
 
+	if ((RxHeader.StdId == 0x726) && (RxHeader.IDE == CAN_ID_STD)
+				&& (RxHeader.DLC == 2)) {
+		if(RxData[0] == 0x01) {
+			activeScreen ^=1;
+		}
+	}
+
 	/* Package one */
 	if ((RxHeader.StdId == 0x360) && (RxHeader.IDE == CAN_ID_STD)
 			&& (RxHeader.DLC == 8)) {
@@ -1006,6 +1013,7 @@ void DataFeedTask(void *argument)
 		shiftLampPersentage = (shiftLampPersentage >= 180) ? -100: shiftLampPersentage + 3;
 	}
 	display_values vals = {
+			activeScreen,
 			rpm,
 			maxRpm,
 			coolantTemp,
