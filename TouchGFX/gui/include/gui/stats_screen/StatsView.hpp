@@ -3,6 +3,7 @@
 
 #include <gui_generated/stats_screen/StatsViewBase.hpp>
 #include <gui/stats_screen/StatsPresenter.hpp>
+#include <message_types.h>
 
 class StatsView : public StatsViewBase
 {
@@ -13,6 +14,7 @@ public:
     virtual void tearDownScreen();
     void updateVal(uint8_t* newValue);
 protected:
+    display_values getDefaults();
 };
 
 #endif // STATSVIEW_HPP

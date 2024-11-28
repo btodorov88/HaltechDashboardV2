@@ -1,11 +1,12 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:27:6:virtual void Screen1View::tearDownScreen()	0	static
-../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:11:13:Screen1View::~Screen1View()	8	static
-../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:11:13:virtual Screen1View::~Screen1View()	8	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:15:1:Screen1View::Screen1View()	8	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:206:6:bool Screen1View::compare_float(float, float, float)	0	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:210:1:cpp)	0	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:20:6:virtual void Screen1View::setupScreen()	8	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:32:6:void Screen1View::updateVal(uint8_t*)	40	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:26:6:virtual void Screen1View::tearDownScreen()	0	static
+../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:12:13:Screen1View::~Screen1View()	8	static
+../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:12:13:virtual Screen1View::~Screen1View()	8	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:205:6:bool Screen1View::compare_float(float, float, float)	0	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:211:16:display_values Screen1View::getDefaults()	64	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:14:1:Screen1View::Screen1View()	8	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:219:1:cpp)	0	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:19:6:virtual void Screen1View::setupScreen()	8	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:31:6:void Screen1View::updateVal(uint8_t*)	40	static

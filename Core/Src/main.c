@@ -1012,33 +1012,54 @@ void DataFeedTask(void *argument)
 		gear = (gear == 'N') ? 'R':'N';
 		shiftLampPersentage = (shiftLampPersentage >= 180) ? -100: shiftLampPersentage + 3;
 	}
+
+	Oil oil = {
+		oilTemp,
+		maxOilTemp,
+		oilPressure,
+		minOilPressure,
+		minOilPressureWarning,
+		lowOilPressureIndicator
+	};
+
+	Coolant coolant = {
+		coolantTemp,
+		coolantTempWarning,
+		maxCoolantTemp,
+		maxCoolentTempWarning
+	};
+
+	Fuel fuel = {
+		fuelPressure,
+		minFuelPressure,
+		fuelTemp
+	};
+
+	Bat bat = {
+		voltage,
+		lowVoltageIndicator,
+	};
+
+
 	display_values vals = {
 			activeScreen,
 			rpm,
 			maxRpm,
-			coolantTemp,
-			coolantTempWarning,
-			maxCoolantTemp,
-			maxCoolentTempWarning,
-			oilTemp,
-			maxOilTemp,
+
 			speed,
 			maxSpeed,
-			oilPressure,
-			minOilPressure,
-			minOilPressureWarning,
-			lowOilPressureIndicator,
-			fuelPressure,
-			minFuelPressure,
-			voltage,
-			lowVoltageIndicator,
-			fuelTemp,
+
 			iat,
 			afr,
 			tps,
 			celIndicator,
 			gear,
-			shiftLampPersentage
+			shiftLampPersentage,
+
+			oil,
+			coolant,
+			fuel,
+			bat
 	};
 	xQueueSend(messageQ, &vals, 0);
 

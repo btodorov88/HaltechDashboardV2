@@ -1,18 +1,17 @@
 #include <gui/stats_screen/StatsView.hpp>
-#include <message_types.h>
 
-static display_values current = {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'N',0};
+static display_values current;
 
 StatsView::StatsView()
 {
-
+	current = getDefaults();
 }
 
 void StatsView::setupScreen()
 {
     StatsViewBase::setupScreen();
     // Clean cache
-    current = {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'N',0};
+    current = getDefaults();
 }
 
 void StatsView::tearDownScreen()
@@ -33,7 +32,7 @@ void StatsView::updateVal(uint8_t* newValue)
 	if(values->rpm != current.rpm)
 	{
 		touchgfx::Unicode::snprintf(curRpmBuffer, CURRPM_SIZE, "%d", values->rpm);
-		maxRpm.invalidate();
+		curRpm.invalidate();
 		current.rpm = values->rpm;
 	}
 	if(values->maxRpm != current.maxRpm)
@@ -67,4 +66,14 @@ void StatsView::updateVal(uint8_t* newValue)
 
 	//OTHER
 
+}
+
+display_values StatsView::getDefaults(){
+	Oil oil = {0,0,0,0,0,0};
+	Coolant coolant = {0,0,0,0};
+	Fuel fuel = {0,0,0};
+	Bat bat = {0,0};
+
+	display_values vals = {1,0,0,0,0,0,0,0,0,'N',0,oil,coolant,fuel,bat};
+	return vals;
 }
