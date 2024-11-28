@@ -8,9 +8,11 @@
 #include <mvp/View.hpp>
 #include <gui/stats_screen/StatsPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/canvas/Line.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class StatsViewBase : public touchgfx::View<StatsPresenter>
 {
@@ -34,28 +36,40 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box1;
-    touchgfx::TextArea textArea1;
-    touchgfx::TextArea textArea1_2;
-    touchgfx::TextArea textArea1_2_1;
-    touchgfx::TextArea textArea1_2_1_1;
-    touchgfx::TextArea textArea1_2_1_1_1;
-    touchgfx::TextArea textArea1_2_1_1_1_1;
-    touchgfx::TextArea textArea1_2_1_1_1_2;
-    touchgfx::TextArea textArea1_2_1_1_1_2_1;
-    touchgfx::TextArea textArea1_2_1_1_1_2_1_1;
-    touchgfx::TextArea textArea1_2_1_1_1_2_1_1_1;
-    touchgfx::TextArea textArea1_2_1_1_1_2_1_1_1_1;
-    touchgfx::TextArea textArea1_2_1_1_1_2_1_1_1_1_1;
+    touchgfx::TextAreaWithOneWildcard curRpm;
+    touchgfx::TextAreaWithOneWildcard maxRpm;
+    touchgfx::TextAreaWithOneWildcard curSpeed;
+    touchgfx::TextAreaWithOneWildcard maxSpeed;
+    touchgfx::TextArea maxCoolantTemp;
+    touchgfx::TextArea curCoolantTemp;
+    touchgfx::TextArea maxOilTemp;
+    touchgfx::TextArea maxFuelTemp;
+    touchgfx::TextArea curOilTemp;
+    touchgfx::TextArea curFuelTemp;
+    touchgfx::TextArea minOilPressure;
+    touchgfx::TextArea minFuelPressure;
+    touchgfx::TextArea curOilPressure;
+    touchgfx::TextArea curFuelPressure;
+    touchgfx::TextArea tps;
+    touchgfx::TextArea runTime;
+    touchgfx::TextArea baro;
+    touchgfx::TextAreaWithOneWildcard minVoltage;
+    touchgfx::TextAreaWithOneWildcard curVoltage;
+    touchgfx::TextArea fuelUsed;
+    touchgfx::TextArea knockCnt;
     touchgfx::TextArea textArea1_1;
     touchgfx::TextArea textArea1_1_2;
     touchgfx::TextArea textArea1_1_2_1;
     touchgfx::TextArea textArea1_1_1;
     touchgfx::TextArea textArea1_1_1_1;
     touchgfx::TextArea textArea1_1_1_1_1;
+    touchgfx::TextArea textArea1_1_1_1_1_3;
     touchgfx::TextArea textArea1_1_1_1_1_2;
     touchgfx::TextArea textArea1_1_1_1_1_2_1;
-    touchgfx::TextArea textArea1_1_1_1_1_2_1_1;
-    touchgfx::TextArea textArea1_1_1_1_1_2_1_1_1;
+    touchgfx::TextArea textArea1_1_1_1_1_2_1_2;
+    touchgfx::TextArea textArea1_1_1_1_1_2_1_2_3;
+    touchgfx::TextArea textArea1_1_1_1_1_2_1_2_1;
+    touchgfx::TextArea textArea1_1_1_1_1_2_1_2_1_2;
     touchgfx::TextArea textArea1_1_1_1_1_1;
     touchgfx::TextArea textArea1_1_1_1_1_1_1;
     touchgfx::TextArea textArea1_1_1_1_1_1_1_1;
@@ -66,10 +80,31 @@ protected:
     touchgfx::PainterRGB565 line1_1Painter;
     touchgfx::Line line1_1_1;
     touchgfx::PainterRGB565 line1_1_1Painter;
+    touchgfx::TextArea textArea1_1_1_1_1_2_1_2_2;
+    touchgfx::TextArea textArea1_1_1_1_1_2_1_2_1_1;
     touchgfx::Line line1_1_1_1;
     touchgfx::PainterRGB565 line1_1_1_1Painter;
+    touchgfx::TextArea textArea1_1_1_1_1_2_1_2_2_1;
+    touchgfx::TextArea textArea1_1_1_1_1_2_1_2_1_1_1;
     touchgfx::Line line1_1_1_1_1;
     touchgfx::PainterRGB565 line1_1_1_1_1Painter;
+    touchgfx::Image cel;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t CURRPM_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar curRpmBuffer[CURRPM_SIZE];
+    static const uint16_t MAXRPM_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar maxRpmBuffer[MAXRPM_SIZE];
+    static const uint16_t CURSPEED_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar curSpeedBuffer[CURSPEED_SIZE];
+    static const uint16_t MAXSPEED_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar maxSpeedBuffer[MAXSPEED_SIZE];
+    static const uint16_t MINVOLTAGE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar minVoltageBuffer[MINVOLTAGE_SIZE];
+    static const uint16_t CURVOLTAGE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar curVoltageBuffer[CURVOLTAGE_SIZE];
 
 private:
 

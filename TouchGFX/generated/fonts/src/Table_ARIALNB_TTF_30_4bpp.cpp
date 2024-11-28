@@ -4,18 +4,17 @@
 
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_ARIALNB_TTF_30_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
-    {     0, 0x002E,   5,   5,   5,   1,   7,   0,   0, 0x00 }, // period
-    {    15, 0x0030,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // zero
-    {   147, 0x0031,   9,  22,  22,   1,  14,   0,   1, 0x00 }, // one
-    {   257, 0x0032,  13,  22,  22,   0,  14,   0,   0, 0x00 }, // two
-    {   411, 0x0033,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // three
-    {   543, 0x0034,  14,  22,  22,   0,  14,   0,   0, 0x00 }, // four
-    {   697, 0x0035,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // five
-    {   829, 0x0036,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // six
-    {   961, 0x0037,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // seven
-    {  1093, 0x0038,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // eight
-    {  1225, 0x0039,  13,  22,  22,   0,  14,   0,   0, 0x00 }, // nine
-    {  1379, 0x003F,  13,  22,  22,   1,  15,   0,   0, 0x00 }  // question
+    {     0, 0x0030,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // zero
+    {   132, 0x0031,   9,  22,  22,   1,  14,   0,   1, 0x00 }, // one
+    {   242, 0x0032,  13,  22,  22,   0,  14,   0,   0, 0x00 }, // two
+    {   396, 0x0033,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // three
+    {   528, 0x0034,  14,  22,  22,   0,  14,   0,   0, 0x00 }, // four
+    {   682, 0x0035,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // five
+    {   814, 0x0036,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // six
+    {   946, 0x0037,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // seven
+    {  1078, 0x0038,  12,  22,  22,   1,  14,   0,   0, 0x00 }, // eight
+    {  1210, 0x0039,  13,  22,  22,   0,  14,   0,   0, 0x00 }, // nine
+    {  1364, 0x003F,  13,  22,  22,   1,  15,   0,   0, 0x00 }  // question
 };
 
 // ARIALNB_TTF_30_4bpp
@@ -33,6 +32,6 @@ touchgfx::GeneratedFont& getFont_ARIALNB_TTF_30_4bpp();
 
 touchgfx::GeneratedFont& getFont_ARIALNB_TTF_30_4bpp()
 {
-    static touchgfx::GeneratedFont ARIALNB_TTF_30_4bpp(glyphs_ARIALNB_TTF_30_4bpp, 12, 30, 30, 0, 0, 4, 1, 0, 0, unicodes_ARIALNB_TTF_30_4bpp, kerning_ARIALNB_TTF_30_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont ARIALNB_TTF_30_4bpp(glyphs_ARIALNB_TTF_30_4bpp, 11, 30, 30, 0, 0, 4, 1, 0, 0, unicodes_ARIALNB_TTF_30_4bpp, kerning_ARIALNB_TTF_30_4bpp, 63, 0, 0, 0);
     return ARIALNB_TTF_30_4bpp;
 }

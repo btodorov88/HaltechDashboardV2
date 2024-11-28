@@ -6,89 +6,155 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_ET97" Alignment="Left" TypographyId="MaxValues">
-        <Translation Language="GB">12.5</Translation>
+      <Text Id="__SingleUse_XZ7B" Alignment="Left" TypographyId="GearIndicator">
+        <Translation Language="GB">00.0</Translation>
       </Text>
-      <Text Id="__SingleUse_U9K5" Alignment="Left" TypographyId="IndicatorBorderValues">
-        <Translation Language="GB">Total Run Time</Translation>
+      <Text Id="__SingleUse_8DG7" Alignment="Left" TypographyId="GearIndicator">
+        <Translation Language="GB">00.0</Translation>
       </Text>
-      <Text Id="__SingleUse_UP1P" Alignment="Left" TypographyId="IndicatorLabels">
-        <Translation Language="GB">Various</Translation>
+      <Text Id="__SingleUse_BX0X" Alignment="Left" TypographyId="Speed">
+        <Translation Language="GB">000</Translation>
       </Text>
-      <Text Id="__SingleUse_XLYU" Alignment="Left" TypographyId="IndicatorLabels">
-        <Translation Language="GB">Live Data</Translation>
+      <Text Id="__SingleUse_FL87" Alignment="Left" TypographyId="Speed">
+        <Translation Language="GB">000</Translation>
       </Text>
-      <Text Id="__SingleUse_4OPD" Alignment="Left" TypographyId="IndicatorLabels">
-        <Translation Language="GB">Max Temps</Translation>
+      <Text Id="__SingleUse_VTZQ" Alignment="Left" TypographyId="Speed">
+        <Translation Language="GB">0000</Translation>
       </Text>
-      <Text Id="__SingleUse_K4NV" Alignment="Left" TypographyId="IndicatorLabels">
-        <Translation Language="GB">Min Pressures</Translation>
+      <Text Id="__SingleUse_VWMW" Alignment="Left" TypographyId="Speed">
+        <Translation Language="GB">0000</Translation>
       </Text>
-      <Text Id="__SingleUse_NLYQ" Alignment="Left" TypographyId="MaxValues">
-        <Translation Language="GB">12.5</Translation>
+      <Text Id="__SingleUse_EYG9" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">4.6</Translation>
       </Text>
-      <Text Id="__SingleUse_HIQX" Alignment="Left" TypographyId="IndicatorBorderValues">
-        <Translation Language="GB">Baro</Translation>
+      <Text Id="__SingleUse_N2FE" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">3.9</Translation>
       </Text>
-      <Text Id="__SingleUse_DCOQ" Alignment="Left" TypographyId="MaxValues">
-        <Translation Language="GB">12.5</Translation>
+      <Text Id="__SingleUse_YSAX" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_58VU" Alignment="Left" TypographyId="IndicatorBorderValues">
-        <Translation Language="GB">Total Fuel Used</Translation>
+      <Text Id="__SingleUse_OIVR" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Current</Translation>
       </Text>
-      <Text Id="__SingleUse_VTO8" Alignment="Left" TypographyId="MaxValues">
-        <Translation Language="GB">12.5</Translation>
+      <Text Id="__SingleUse_G1J3" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Min</Translation>
       </Text>
-      <Text Id="__SingleUse_357F" Alignment="Left" TypographyId="IndicatorBorderValues">
-        <Translation Language="GB">Min Voltage</Translation>
+      <Text Id="__SingleUse_QR3S" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Min</Translation>
       </Text>
-      <Text Id="__SingleUse_MZIZ" Alignment="Left" TypographyId="MaxValues">
+      <Text Id="__SingleUse_1WSH" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Current</Translation>
+      </Text>
+      <Text Id="__SingleUse_YBCY" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_8263" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_8AVY" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Current</Translation>
+      </Text>
+      <Text Id="__SingleUse_08PY" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Max</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y679" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">20</Translation>
+      </Text>
+      <Text Id="__SingleUse_9Q3J" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">40</Translation>
+      </Text>
+      <Text Id="__SingleUse_HVE0" Alignment="Right" TypographyId="SummaryValues">
         <Translation Language="GB">120</Translation>
       </Text>
-      <Text Id="__SingleUse_IFLO" Alignment="Left" TypographyId="IndicatorBorderValues">
-        <Translation Language="GB">Knock Count</Translation>
-      </Text>
-      <Text Id="__SingleUse_1DHL" Alignment="Left" TypographyId="MaxValues">
+      <Text Id="__SingleUse_UQAH" Alignment="Right" TypographyId="SummaryValues">
         <Translation Language="GB">120</Translation>
       </Text>
-      <Text Id="__SingleUse_341W" Alignment="Left" TypographyId="MaxValues">
-        <Translation Language="GB">120</Translation>
+      <Text Id="__SingleUse_ARWS" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Max</Translation>
       </Text>
-      <Text Id="__SingleUse_8THG" Alignment="Left" TypographyId="IndicatorBorderValues">
+      <Text Id="__SingleUse_OCBD" Alignment="Left" TypographyId="IndicatorLabels">
+        <Translation Language="GB">Current</Translation>
+      </Text>
+      <Text Id="__SingleUse_1824" Alignment="Left" TypographyId="SummaryLabels">
         <Translation Language="GB">Fuel</Translation>
       </Text>
-      <Text Id="__SingleUse_3J2E" Alignment="Left" TypographyId="IndicatorBorderValues">
+      <Text Id="__SingleUse_ET97" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">1321</Translation>
+      </Text>
+      <Text Id="__SingleUse_U9K5" Alignment="Left" TypographyId="SummaryLabels">
+        <Translation Language="GB">Run Time</Translation>
+      </Text>
+      <Text Id="__SingleUse_4OPD" Alignment="Left" TypographyId="SummaryHeaders">
+        <Translation Language="GB">Temps</Translation>
+      </Text>
+      <Text Id="__SingleUse_K4NV" Alignment="Left" TypographyId="SummaryHeaders">
+        <Translation Language="GB">Pressures</Translation>
+      </Text>
+      <Text Id="__SingleUse_NLYQ" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">12.5</Translation>
+      </Text>
+      <Text Id="__SingleUse_HIQX" Alignment="Left" TypographyId="SummaryLabels">
+        <Translation Language="GB">Knock Cnt</Translation>
+      </Text>
+      <Text Id="__SingleUse_DCOQ" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_58VU" Alignment="Left" TypographyId="SummaryLabels">
+        <Translation Language="GB">Fuel Used</Translation>
+      </Text>
+      <Text Id="__SingleUse_VTO8" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">2.3</Translation>
+      </Text>
+      <Text Id="__SingleUse_357F" Alignment="Left" TypographyId="SummaryLabels">
+        <Translation Language="GB">Voltage</Translation>
+      </Text>
+      <Text Id="__SingleUse_MZIZ" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">120</Translation>
+      </Text>
+      <Text Id="__SingleUse_IFLO" Alignment="Left" TypographyId="SummaryLabels">
+        <Translation Language="GB">Baro</Translation>
+      </Text>
+      <Text Id="__SingleUse_1DHL" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="__SingleUse_341W" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">3.9</Translation>
+      </Text>
+      <Text Id="__SingleUse_8THG" Alignment="Left" TypographyId="SummaryLabels">
+        <Translation Language="GB">Fuel</Translation>
+      </Text>
+      <Text Id="__SingleUse_3J2E" Alignment="Left" TypographyId="SummaryLabels">
         <Translation Language="GB">TPS</Translation>
       </Text>
-      <Text Id="__SingleUse_APIY" Alignment="Left" TypographyId="MaxValues">
-        <Translation Language="GB">120</Translation>
+      <Text Id="__SingleUse_APIY" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">4.6</Translation>
       </Text>
-      <Text Id="__SingleUse_WGL6" Alignment="Left" TypographyId="IndicatorBorderValues">
+      <Text Id="__SingleUse_WGL6" Alignment="Left" TypographyId="SummaryLabels">
         <Translation Language="GB">Oil</Translation>
       </Text>
-      <Text Id="__SingleUse_ZFUR" Alignment="Left" TypographyId="MaxValues">
+      <Text Id="__SingleUse_ZFUR" Alignment="Right" TypographyId="SummaryValues">
         <Translation Language="GB">120</Translation>
       </Text>
-      <Text Id="__SingleUse_UYNX" Alignment="Left" TypographyId="IndicatorBorderValues">
-        <Translation Language="GB">Max Oil Temp</Translation>
+      <Text Id="__SingleUse_UYNX" Alignment="Left" TypographyId="SummaryLabels">
+        <Translation Language="GB">Oil</Translation>
       </Text>
-      <Text Id="__SingleUse_AW0J" Alignment="Left" TypographyId="MaxValues">
+      <Text Id="__SingleUse_AW0J" Alignment="Right" TypographyId="SummaryValues">
         <Translation Language="GB">120</Translation>
       </Text>
-      <Text Id="__SingleUse_TS6I" Alignment="Left" TypographyId="IndicatorBorderValues">
-        <Translation Language="GB">Max Coolant Temp</Translation>
+      <Text Id="__SingleUse_TS6I" Alignment="Left" TypographyId="SummaryLabels">
+        <Translation Language="GB">Coolant</Translation>
       </Text>
-      <Text Id="__SingleUse_6065" Alignment="Left" TypographyId="MaxValues">
-        <Translation Language="GB">120</Translation>
+      <Text Id="__SingleUse_6065" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_FOMG" Alignment="Left" TypographyId="IndicatorBorderValues">
-        <Translation Language="GB">Max Speed</Translation>
+      <Text Id="__SingleUse_FOMG" Alignment="Left" TypographyId="SummaryLabels">
+        <Translation Language="GB">Speed</Translation>
       </Text>
-      <Text Id="__SingleUse_WH3E" Alignment="Left" TypographyId="IndicatorBorderValues">
-        <Translation Language="GB">Max RPM</Translation>
+      <Text Id="__SingleUse_WH3E" Alignment="Left" TypographyId="SummaryLabels">
+        <Translation Language="GB">RPM</Translation>
       </Text>
-      <Text Id="__SingleUse_MJS6" Alignment="Left" TypographyId="MaxValues">
-        <Translation Language="GB">7600</Translation>
+      <Text Id="__SingleUse_MJS6" Alignment="Right" TypographyId="SummaryValues">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_YEWF" Alignment="Left" TypographyId="GearIndicator">
         <Translation Language="GB">N</Translation>
@@ -214,5 +280,8 @@
     <Typography Id="MaxLabels" Font="arialbd.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="MaxValues" Font="ARIALNB.TTF" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
     <Typography Id="IndicatorBorderValues" Font="ARIALNB.TTF" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-.0123456789" />
+    <Typography Id="SummaryLabels" Font="ARIALNB.TTF" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="SummaryValues" Font="arialbd.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="SummaryHeaders" Font="arialbd.ttf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

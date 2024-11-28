@@ -20,6 +20,9 @@ struct Typography
     static const touchgfx::FontId MAXLABELS = 4;
     static const touchgfx::FontId MAXVALUES = 5;
     static const touchgfx::FontId INDICATORBORDERVALUES = 6;
+    static const touchgfx::FontId SUMMARYLABELS = 7;
+    static const touchgfx::FontId SUMMARYVALUES = 8;
+    static const touchgfx::FontId SUMMARYHEADERS = 9;
 };
 
 struct TypographyFontIndex
@@ -31,7 +34,10 @@ struct TypographyFontIndex
     static const touchgfx::FontId MAXLABELS = 4;             // arialbd_10_4bpp
     static const touchgfx::FontId MAXVALUES = 5;             // ARIALNB_TTF_30_4bpp
     static const touchgfx::FontId INDICATORBORDERVALUES = 6; // ARIALNB_TTF_18_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 7;
+    static const touchgfx::FontId SUMMARYLABELS = 7;         // ARIALNB_TTF_20_4bpp
+    static const touchgfx::FontId SUMMARYVALUES = 8;         // arialbd_28_4bpp
+    static const touchgfx::FontId SUMMARYHEADERS = 9;        // arialbd_14_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 10;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider
