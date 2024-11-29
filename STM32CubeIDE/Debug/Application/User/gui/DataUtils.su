@@ -1,2 +1,2 @@
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/common/DataUtils.cpp:7:16:display_values dataUtils::getDefaults(int)	64	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/common/DataUtils.cpp:7:16:display_values dataUtils::getDefaults(int)	96	static
 C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/common/DataUtils.cpp:17:6:bool dataUtils::compare_float(float, float, float)	0	static

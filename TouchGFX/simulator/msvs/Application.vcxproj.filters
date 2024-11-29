@@ -246,6 +246,9 @@
     <ClCompile Include="..\..\generated\gui_generated\src\stats_screen\StatsViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\stats_screen</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\gui\src\common\DataUtils.cpp">
+      <Filter>Source Files\gui\common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml">
@@ -705,6 +708,9 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\stats_screen\StatsViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\stats_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\DataUtils.hpp">
+      <Filter>Header Files\gui\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

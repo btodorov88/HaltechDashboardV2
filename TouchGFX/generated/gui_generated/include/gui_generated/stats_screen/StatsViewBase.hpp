@@ -40,17 +40,17 @@ protected:
     touchgfx::TextAreaWithOneWildcard maxRpm;
     touchgfx::TextAreaWithOneWildcard curSpeed;
     touchgfx::TextAreaWithOneWildcard maxSpeed;
-    touchgfx::TextArea maxCoolantTemp;
-    touchgfx::TextArea curCoolantTemp;
-    touchgfx::TextArea maxOilTemp;
-    touchgfx::TextArea maxFuelTemp;
-    touchgfx::TextArea curOilTemp;
-    touchgfx::TextArea curFuelTemp;
-    touchgfx::TextArea minOilPressure;
-    touchgfx::TextArea minFuelPressure;
-    touchgfx::TextArea curOilPressure;
-    touchgfx::TextArea curFuelPressure;
-    touchgfx::TextArea tps;
+    touchgfx::TextAreaWithOneWildcard maxCoolantTemp;
+    touchgfx::TextAreaWithOneWildcard curCoolantTemp;
+    touchgfx::TextAreaWithOneWildcard maxOilTemp;
+    touchgfx::TextAreaWithOneWildcard maxFuelTemp;
+    touchgfx::TextAreaWithOneWildcard curOilTemp;
+    touchgfx::TextAreaWithOneWildcard curFuelTemp;
+    touchgfx::TextAreaWithOneWildcard minOilPressure;
+    touchgfx::TextAreaWithOneWildcard minFuelPressure;
+    touchgfx::TextAreaWithOneWildcard curOilPressure;
+    touchgfx::TextAreaWithOneWildcard curFuelPressure;
+    touchgfx::TextAreaWithOneWildcard tps;
     touchgfx::TextArea runTime;
     touchgfx::TextArea baro;
     touchgfx::TextAreaWithOneWildcard minVoltage;
@@ -64,6 +64,9 @@ protected:
     touchgfx::TextArea textArea1_1_1_1;
     touchgfx::TextArea textArea1_1_1_1_1;
     touchgfx::TextArea textArea1_1_1_1_1_3;
+    touchgfx::TextAreaWithOneWildcard maxIat;
+    touchgfx::TextAreaWithOneWildcard curIat;
+    touchgfx::TextArea textArea1_1_1_1_1_3_1;
     touchgfx::TextArea textArea1_1_1_1_1_2;
     touchgfx::TextArea textArea1_1_1_1_1_2_1;
     touchgfx::TextArea textArea1_1_1_1_1_2_1_2;
@@ -84,10 +87,6 @@ protected:
     touchgfx::TextArea textArea1_1_1_1_1_2_1_2_1_1;
     touchgfx::Line line1_1_1_1;
     touchgfx::PainterRGB565 line1_1_1_1Painter;
-    touchgfx::TextArea textArea1_1_1_1_1_2_1_2_2_1;
-    touchgfx::TextArea textArea1_1_1_1_1_2_1_2_1_1_1;
-    touchgfx::Line line1_1_1_1_1;
-    touchgfx::PainterRGB565 line1_1_1_1_1Painter;
     touchgfx::Image cel;
 
     /*
@@ -101,10 +100,36 @@ protected:
     touchgfx::Unicode::UnicodeChar curSpeedBuffer[CURSPEED_SIZE];
     static const uint16_t MAXSPEED_SIZE = 10;
     touchgfx::Unicode::UnicodeChar maxSpeedBuffer[MAXSPEED_SIZE];
+    static const uint16_t MAXCOOLANTTEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar maxCoolantTempBuffer[MAXCOOLANTTEMP_SIZE];
+    static const uint16_t CURCOOLANTTEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar curCoolantTempBuffer[CURCOOLANTTEMP_SIZE];
+    static const uint16_t MAXOILTEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar maxOilTempBuffer[MAXOILTEMP_SIZE];
+    static const uint16_t MAXFUELTEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar maxFuelTempBuffer[MAXFUELTEMP_SIZE];
+    static const uint16_t CUROILTEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar curOilTempBuffer[CUROILTEMP_SIZE];
+    static const uint16_t CURFUELTEMP_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar curFuelTempBuffer[CURFUELTEMP_SIZE];
+    static const uint16_t MINOILPRESSURE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar minOilPressureBuffer[MINOILPRESSURE_SIZE];
+    static const uint16_t MINFUELPRESSURE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar minFuelPressureBuffer[MINFUELPRESSURE_SIZE];
+    static const uint16_t CUROILPRESSURE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar curOilPressureBuffer[CUROILPRESSURE_SIZE];
+    static const uint16_t CURFUELPRESSURE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar curFuelPressureBuffer[CURFUELPRESSURE_SIZE];
+    static const uint16_t TPS_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar tpsBuffer[TPS_SIZE];
     static const uint16_t MINVOLTAGE_SIZE = 10;
     touchgfx::Unicode::UnicodeChar minVoltageBuffer[MINVOLTAGE_SIZE];
     static const uint16_t CURVOLTAGE_SIZE = 10;
     touchgfx::Unicode::UnicodeChar curVoltageBuffer[CURVOLTAGE_SIZE];
+    static const uint16_t MAXIAT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar maxIatBuffer[MAXIAT_SIZE];
+    static const uint16_t CURIAT_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar curIatBuffer[CURIAT_SIZE];
 
 private:
 

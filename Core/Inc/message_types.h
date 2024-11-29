@@ -22,12 +22,16 @@ typedef struct {
 typedef struct {
 	float fuelPressure;
 	float minFuelPressure;
+	bool lowMinFuelPressure;
 	int fuelTemp;
+	int maxFuelTemp;
 } Fuel;
 
 typedef struct {
 	float voltage;
+	float minVoltage;
 	bool lowVoltageIndicator;
+	bool lowMinVoltageIndicator;
 } Bat;
 
 

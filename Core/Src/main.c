@@ -40,8 +40,13 @@
 /* USER CODE BEGIN PD */
 
 #define MIN_OIL_PRESSURE_THRESHOLD 3
+#define MIN_FUEL_PRESSURE_THRESHOLD 3.5
 #define MIN_FUEL_PRESSURE_RPM_BOUND 700 // Values measured when the engine is bellow the specified RPMs are ignored in the min pressure counter
 #define MIN_OIL_PRESSURE_RPM_BOUND 2500
+
+#define MIN_VOLTAGE_RPM_BOUND 2000
+#define MIN_VOLTAGE_THRESHOLD 12.5
+
 #define GEAR_SHIFT_RPM 7500
 #define GEAR_SHIFT_LAMP_RPM_DURATION 400 // RPMs before GEAR_SHIFT_RPM to start the gear shift indicator logic
 
@@ -148,24 +153,29 @@ static bool coolantTempWarning = false;
 static int maxCoolantTemp = 0;
 static bool maxCoolentTempWarning = false;
 
-static int oilTemp = 0;
-static int maxOilTemp = 0;
-
 static int speed = 0;
 static int maxSpeed = 0;
 
+// OIL
+static int oilTemp = 0;
+static int maxOilTemp = 0;
 static float oilPressure = 0;
 static float minOilPressure = -1;
 static bool minOilPressureWarning = true;
 static bool lowOilPressureIndicator = true;
 
+// FUEL
 static float fuelPressure = 0;
 static float minFuelPressure = -1;
+static bool lowMinFuelPressure = false;
+static int fuelTemp = 0;
+static int maxFuelTemp = 0;
 
 static float voltage = 0;
+static float minVoltage = -1;
 static bool lowVoltageIndicator = true;
+static bool lowMinVoltageIndicator = false;
 
-static int fuelTemp = 0;
 static int iat = 0;
 static float afr = 0.0f;
 static int tps = 0;
@@ -878,6 +888,13 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		uint16_t batt_in = (RxData[0] << 8) | (RxData[1] << 0);
 		float battery_voltage = ((float) batt_in) * 0.1f;
 		voltage = battery_voltage;
+
+		if (rpm > MIN_VOLTAGE_RPM_BOUND && (minVoltage < 0 || voltage < minVoltage)) {
+			minVoltage = voltage;
+			if(minVoltage < MIN_VOLTAGE_THRESHOLD){
+				lowMinVoltageIndicator = true;
+			}
+		}
 	}
 
 	if ((RxHeader.StdId == 0x3E0) && (RxHeader.IDE == CAN_ID_STD)
@@ -1032,12 +1049,16 @@ void DataFeedTask(void *argument)
 	Fuel fuel = {
 		fuelPressure,
 		minFuelPressure,
-		fuelTemp
+		lowMinFuelPressure,
+		fuelTemp,
+		maxFuelTemp
 	};
 
 	Bat bat = {
 		voltage,
+		minVoltage,
 		lowVoltageIndicator,
+		lowMinVoltageIndicator
 	};
 
 

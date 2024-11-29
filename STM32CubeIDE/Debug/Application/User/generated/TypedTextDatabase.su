@@ -1,6 +1,6 @@
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:134:43:const touchgfx::TypedText::TypedTextData* TypedTextDatabase::getInstance(touchgfx::LanguageId)	0	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:139:10:uint16_t TypedTextDatabase::getInstanceSize()	0	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:144:24:const touchgfx::Font** TypedTextDatabase::getFonts()	0	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:149:23:const touchgfx::Font* TypedTextDatabase::setFont(touchgfx::FontId, const touchgfx::Font*)	0	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:156:6:void TypedTextDatabase::resetFont(touchgfx::FontId)	8	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:192:1:cpp)	8	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:148:43:const touchgfx::TypedText::TypedTextData* TypedTextDatabase::getInstance(touchgfx::LanguageId)	0	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:153:10:uint16_t TypedTextDatabase::getInstanceSize()	0	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:158:24:const touchgfx::Font** TypedTextDatabase::getFonts()	0	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:163:23:const touchgfx::Font* TypedTextDatabase::setFont(touchgfx::FontId, const touchgfx::Font*)	0	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:170:6:void TypedTextDatabase::resetFont(touchgfx::FontId)	8	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:206:1:cpp)	8	static
