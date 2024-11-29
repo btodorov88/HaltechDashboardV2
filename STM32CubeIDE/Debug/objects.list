@@ -65,6 +65,7 @@
 "./Application/User/generated/image_celLight.o"
 "./Application/User/generated/image_finalNeedle.o"
 "./Application/User/generated/image_oilLight.o"
+"./Application/User/gui/DataUtils.o"
 "./Application/User/gui/FrontendApplication.o"
 "./Application/User/gui/Model.o"
 "./Application/User/gui/Screen1Presenter.o"

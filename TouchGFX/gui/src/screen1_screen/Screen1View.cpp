@@ -1,4 +1,5 @@
 #include <gui/screen1_screen/Screen1View.hpp>
+#include <gui/common/DataUtils.hpp>
 #include <touchgfx/Color.hpp>
 
 static display_values current;
@@ -13,14 +14,14 @@ static int SHIFT_LIGHT_BLINK_ALPHA = 255;
 
 Screen1View::Screen1View()
 {
-	current = getDefaults();
+	current = dataUtils::getDefaults(0);
 }
 
 void Screen1View::setupScreen()
 {
     Screen1ViewBase::setupScreen();
     // cleanup cache
-	current = getDefaults();
+	current = dataUtils::getDefaults(0);
 }
 
 void Screen1View::tearDownScreen()
@@ -88,12 +89,12 @@ void Screen1View::updateVal(uint8_t* newValue)
 		current.oil.oilTemp = values->oil.oilTemp;
 	}
 
-	if(!compare_float(values->oil.oilPressure, current.oil.oilPressure)){
+	if(!dataUtils::compare_float(values->oil.oilPressure, current.oil.oilPressure)){
 		touchgfx::Unicode::snprintfFloat(txtOilPressBuffer, TXTOILPRESS_SIZE, "%.1f", values->oil.oilPressure);
 		txtOilPress.invalidate();
 		current.oil.oilPressure = values->oil.oilPressure;
 	}
-	if(!compare_float(values->oil.minOilPressure, current.oil.minOilPressure)){
+	if(!dataUtils::compare_float(values->oil.minOilPressure, current.oil.minOilPressure)){
 		touchgfx::Unicode::snprintfFloat(txtMinOilPressureBuffer, TXTMINOILPRESSURE_SIZE, "%.1f", values->oil.minOilPressure);
 		if(values->oil.minOilPressure < 0){
 			txtMinOilPressure.setVisible(false);
@@ -110,12 +111,12 @@ void Screen1View::updateVal(uint8_t* newValue)
 		current.oil.minOilPressure = values->oil.minOilPressure;
 	}
 
-	if(!compare_float(values->fuel.fuelPressure, current.fuel.fuelPressure)){
+	if(!dataUtils::compare_float(values->fuel.fuelPressure, current.fuel.fuelPressure)){
 		touchgfx::Unicode::snprintfFloat(txtFuelPressBuffer, TXTFUELPRESS_SIZE, "%.1f", values->fuel.fuelPressure);
 		txtFuelPress.invalidate();
 		current.fuel.fuelPressure = values->fuel.fuelPressure;
 	}
-	if(!compare_float(values->fuel.minFuelPressure, current.fuel.minFuelPressure)){
+	if(!dataUtils::compare_float(values->fuel.minFuelPressure, current.fuel.minFuelPressure)){
 		touchgfx::Unicode::snprintfFloat(txtMinFuelPressureBuffer, TXTMINFUELPRESSURE_SIZE, "%.1f", values->fuel.minFuelPressure);
 		if(values->fuel.minFuelPressure < 0){
 			txtMinFuelPressure.setVisible(false);
@@ -126,13 +127,13 @@ void Screen1View::updateVal(uint8_t* newValue)
 		current.fuel.minFuelPressure = values->fuel.minFuelPressure;
 	}
 
-	if(!compare_float(values->bat.voltage, current.bat.voltage)){
+	if(!dataUtils::compare_float(values->bat.voltage, current.bat.voltage)){
 		touchgfx::Unicode::snprintfFloat(txtVoltageBuffer, TXTVOLTAGE_SIZE, "%.1f", values->bat.voltage);
 		txtVoltage.invalidate();
 		current.bat.voltage = values->bat.voltage;
 	}
 
-	if(!compare_float(values->afr, current.afr, 0.01f)){
+	if(!dataUtils::compare_float(values->afr, current.afr, 0.01f)){
 		touchgfx::Unicode::snprintfFloat(txtWidebandBuffer, TXTWIDEBAND_SIZE, "%.2f", values->afr);
 		txtWideband.invalidate();
 		current.afr = values->afr;
@@ -200,20 +201,4 @@ void Screen1View::updateVal(uint8_t* newValue)
 		shiftIndicator.invalidate();
 	}
 	current.shiftLampPersentage = shiftLampPersentage;
-}
-
-bool Screen1View::compare_float(float x, float y, float epsilon){
-	if(abs(x - y) < epsilon)
-		return true; //they are same
-	return false; //they are not same
-}
-
-display_values Screen1View::getDefaults(){
-	Oil oil = {0,0,0,0,0,0};
-	Coolant coolant = {0,0,0,0};
-	Fuel fuel = {0,0,0};
-	Bat bat = {0,0};
-
-	display_values vals = {0,0,0,0,0,0,0,0,0,'N',0,oil,coolant,fuel,bat};
-	return vals;
 }

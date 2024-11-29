@@ -1,17 +1,23 @@
 #include <gui/stats_screen/StatsView.hpp>
+#include <gui/common/DataUtils.hpp>
+#include <touchgfx/Color.hpp>
 
 static display_values current;
 
+static colortype RED = touchgfx::Color::getColorFromRGB(255, 0, 0);
+static colortype YELLOW = touchgfx::Color::getColorFromRGB(255, 255, 0);
+static colortype WHITE = touchgfx::Color::getColorFromRGB(255, 255, 255);
+
 StatsView::StatsView()
 {
-	current = getDefaults();
+	current = dataUtils::getDefaults(1);
 }
 
 void StatsView::setupScreen()
 {
     StatsViewBase::setupScreen();
     // Clean cache
-    current = getDefaults();
+    current = dataUtils::getDefaults(1);
 }
 
 void StatsView::tearDownScreen()
@@ -63,17 +69,21 @@ void StatsView::updateVal(uint8_t* newValue)
 	// FUEL
 
 	// BAT
+	if(!dataUtils::compare_float(values->bat.voltage, current.bat.voltage)){
+		touchgfx::Unicode::snprintfFloat(curVoltageBuffer, CURVOLTAGE_SIZE, "%.1f", values->bat.voltage);
+		curVoltage.invalidate();
+		current.bat.voltage = values->bat.voltage;
+	}
+	if(values->bat.lowVoltageIndicator != current.bat.lowVoltageIndicator){
+		if(values->bat.lowVoltageIndicator){
+			curVoltage.setColor(RED);
+		} else {
+			curVoltage.setColor(WHITE);
+		}
+		curVoltage.invalidate();
+		current.bat.lowVoltageIndicator = values->bat.lowVoltageIndicator;
+	}
 
 	//OTHER
 
-}
-
-display_values StatsView::getDefaults(){
-	Oil oil = {0,0,0,0,0,0};
-	Coolant coolant = {0,0,0,0};
-	Fuel fuel = {0,0,0};
-	Bat bat = {0,0};
-
-	display_values vals = {1,0,0,0,0,0,0,0,0,'N',0,oil,coolant,fuel,bat};
-	return vals;
 }
