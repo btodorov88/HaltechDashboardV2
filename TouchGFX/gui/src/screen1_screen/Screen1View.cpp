@@ -139,11 +139,11 @@ void Screen1View::updateVal(uint8_t* newValue)
 		current.afr = values->afr;
 	}
 
-	if(values->iat != current.iat)
+	if(values->iat.iat != current.iat.iat)
 	{
-		touchgfx::Unicode::snprintf(txtIatBuffer, TXTIAT_SIZE, "%d", values->iat);
+		touchgfx::Unicode::snprintf(txtIatBuffer, TXTIAT_SIZE, "%d", values->iat.iat);
 		txtIat.invalidate();
-		current.iat = values->iat;
+		current.iat.iat = values->iat.iat;
 	}
 
 	if(values->gear != current.gear)

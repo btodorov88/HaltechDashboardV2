@@ -4,7 +4,7 @@
 C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsView.cpp:23:6:virtual void StatsView::tearDownScreen()	0	static
 ../../TouchGFX/gui/include/gui/stats_screen/StatsView.hpp:12:13:StatsView::~StatsView()	8	static
 ../../TouchGFX/gui/include/gui/stats_screen/StatsView.hpp:12:13:virtual StatsView::~StatsView()	8	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsView.cpp:11:1:StatsView::StatsView()	120	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsView.cpp:189:1:cpp)	0	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsView.cpp:16:6:virtual void StatsView::setupScreen()	120	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsView.cpp:28:6:void StatsView::updateVal(uint8_t*)	24	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsView.cpp:11:1:StatsView::StatsView()	144	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsView.cpp:250:1:cpp)	0	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsView.cpp:16:6:virtual void StatsView::setupScreen()	144	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/stats_screen/StatsView.cpp:28:6:void StatsView::updateVal(uint8_t*)	40	static

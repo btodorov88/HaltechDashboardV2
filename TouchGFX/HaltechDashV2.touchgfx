@@ -865,9 +865,9 @@
           {
             "Type": "TextArea",
             "Name": "runTime",
-            "X": 420,
-            "Y": 236,
-            "Width": 48,
+            "X": 380,
+            "Y": 234,
+            "Width": 73,
             "Height": 28,
             "TextId": "__SingleUse_MZIZ",
             "TextRotation": "0",
@@ -876,7 +876,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_C5CS",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -892,7 +897,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_OS4N",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -950,7 +960,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_1GLL",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -966,7 +981,12 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_6028",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           },
           {
             "Type": "TextArea",
@@ -1083,9 +1103,9 @@
           {
             "Type": "TextArea",
             "Name": "maxIat",
-            "X": 435,
+            "X": 426,
             "Y": 113,
-            "Width": 32,
+            "Width": 41,
             "Height": 28,
             "TextId": "__SingleUse_P1OY",
             "TextRotation": "0",
@@ -1104,9 +1124,9 @@
           {
             "Type": "TextArea",
             "Name": "curIat",
-            "X": 360,
+            "X": 351,
             "Y": 113,
-            "Width": 32,
+            "Width": 41,
             "Height": 28,
             "TextId": "__SingleUse_LJLD",
             "TextRotation": "0",
@@ -1290,22 +1310,6 @@
             "Width": 79,
             "Height": 24,
             "TextId": "__SingleUse_58VU",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textArea1_1_1_1_1_1_1_1_1_2",
-            "X": 322,
-            "Y": 243,
-            "Width": 76,
-            "Height": 24,
-            "TextId": "__SingleUse_U9K5",
             "TextRotation": "0",
             "Color": {
               "Red": 255,

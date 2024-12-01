@@ -6,14 +6,26 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_1GLL" Alignment="Left" TypographyId="GearIndicator">
+        <Translation Language="GB">00.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_6028" Alignment="Left" TypographyId="GearIndicator">
+        <Translation Language="GB">0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_OS4N" Alignment="Left" TypographyId="GearIndicator">
+        <Translation Language="GB">0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_C5CS" Alignment="Left" TypographyId="GearIndicator">
+        <Translation Language="GB">00:00</Translation>
+      </Text>
       <Text Id="__SingleUse_HVMW" Alignment="Left" TypographyId="GearIndicator">
-        <Translation Language="GB">00</Translation>
+        <Translation Language="GB">-00</Translation>
       </Text>
       <Text Id="__SingleUse_P1OY" Alignment="Right" TypographyId="SummaryValues">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_7UOL" Alignment="Left" TypographyId="GearIndicator">
-        <Translation Language="GB">00</Translation>
+        <Translation Language="GB">-00</Translation>
       </Text>
       <Text Id="__SingleUse_LJLD" Alignment="Right" TypographyId="SummaryValues">
         <Translation Language="GB">&lt;value&gt;</Translation>
@@ -121,10 +133,7 @@
         <Translation Language="GB">Fuel</Translation>
       </Text>
       <Text Id="__SingleUse_ET97" Alignment="Right" TypographyId="SummaryValues">
-        <Translation Language="GB">1321</Translation>
-      </Text>
-      <Text Id="__SingleUse_U9K5" Alignment="Left" TypographyId="SummaryLabels">
-        <Translation Language="GB">Run Time</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_4OPD" Alignment="Left" TypographyId="SummaryHeaders">
         <Translation Language="GB">Temps</Translation>
@@ -133,7 +142,7 @@
         <Translation Language="GB">Pressures</Translation>
       </Text>
       <Text Id="__SingleUse_NLYQ" Alignment="Right" TypographyId="SummaryValues">
-        <Translation Language="GB">12.5</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_HIQX" Alignment="Left" TypographyId="SummaryLabels">
         <Translation Language="GB">Knock</Translation>
@@ -145,13 +154,13 @@
         <Translation Language="GB">Fuel Used</Translation>
       </Text>
       <Text Id="__SingleUse_VTO8" Alignment="Right" TypographyId="SummaryValues">
-        <Translation Language="GB">2.3</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_357F" Alignment="Left" TypographyId="SummaryLabels">
         <Translation Language="GB">Voltage</Translation>
       </Text>
       <Text Id="__SingleUse_MZIZ" Alignment="Right" TypographyId="SummaryValues">
-        <Translation Language="GB">120</Translation>
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_IFLO" Alignment="Left" TypographyId="SummaryLabels">
         <Translation Language="GB">Baro</Translation>
@@ -323,7 +332,7 @@
     <Typography Id="MaxValues" Font="ARIALNB.TTF" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
     <Typography Id="IndicatorBorderValues" Font="ARIALNB.TTF" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-.0123456789" />
     <Typography Id="SummaryLabels" Font="ARIALNB.TTF" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="SummaryValues" Font="arialbd.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-.0123456789NR" />
+    <Typography Id="SummaryValues" Font="arialbd.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-:.0123456789NR" />
     <Typography Id="SummaryHeaders" Font="arialbd.ttf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

@@ -4,7 +4,7 @@
 C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:27:6:virtual void Screen1View::tearDownScreen()	0	static
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:12:13:Screen1View::~Screen1View()	8	static
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:12:13:virtual Screen1View::~Screen1View()	8	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:15:1:Screen1View::Screen1View()	120	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:15:1:Screen1View::Screen1View()	144	static
 C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:204:1:cpp)	0	static
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:20:6:virtual void Screen1View::setupScreen()	120	static
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:20:6:virtual void Screen1View::setupScreen()	144	static
 C:/TouchGFXProjects/HaltechDashV2/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:32:6:void Screen1View::updateVal(uint8_t*)	32	static

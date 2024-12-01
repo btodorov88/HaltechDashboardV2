@@ -28,14 +28,13 @@ KEEP extern const touchgfx::GlyphNode glyphs_ARIALNB_TTF_20_4bpp[] FONT_TABLE_LO
     {  1530, 0x0069,   3,  15,  15,   1,   5,   0,   0, 0x00 }, // i
     {  1560, 0x006B,   8,  15,  15,   1,   9,   0,   0, 0x00 }, // k
     {  1620, 0x006C,   3,  15,  15,   1,   5,   0,   0, 0x00 }, // l
-    {  1650, 0x006D,  13,  11,  11,   1,  15,   0,   0, 0x00 }, // m
-    {  1727, 0x006E,   8,  11,  11,   1,  10,   0,   0, 0x00 }, // n
-    {  1771, 0x006F,  10,  11,  11,   0,  10,  11,   2, 0x00 }, // o
-    {  1826, 0x0070,   9,  15,  11,   1,  10,   0,   0, 0x00 }, // p
-    {  1901, 0x0072,   6,  11,  11,   1,   6,  13,   2, 0x00 }, // r
-    {  1934, 0x0073,   9,  11,  11,   0,   9,  15,   1, 0x00 }, // s
-    {  1989, 0x0074,   6,  15,  15,   0,   5,   0,   0, 0x00 }, // t
-    {  2034, 0x0075,   8,  11,  11,   1,  10,  16,   1, 0x00 }  // u
+    {  1650, 0x006E,   8,  11,  11,   1,  10,   0,   0, 0x00 }, // n
+    {  1694, 0x006F,  10,  11,  11,   0,  10,  11,   2, 0x00 }, // o
+    {  1749, 0x0070,   9,  15,  11,   1,  10,   0,   0, 0x00 }, // p
+    {  1824, 0x0072,   6,  11,  11,   1,   6,  13,   2, 0x00 }, // r
+    {  1857, 0x0073,   9,  11,  11,   0,   9,  15,   1, 0x00 }, // s
+    {  1912, 0x0074,   6,  15,  15,   0,   5,   0,   0, 0x00 }, // t
+    {  1957, 0x0075,   8,  11,  11,   1,  10,  16,   1, 0x00 }  // u
 };
 
 // ARIALNB_TTF_20_4bpp
@@ -53,6 +52,6 @@ touchgfx::GeneratedFont& getFont_ARIALNB_TTF_20_4bpp();
 
 touchgfx::GeneratedFont& getFont_ARIALNB_TTF_20_4bpp()
 {
-    static touchgfx::GeneratedFont ARIALNB_TTF_20_4bpp(glyphs_ARIALNB_TTF_20_4bpp, 32, 24, 20, 0, 0, 4, 1, 0, 1, unicodes_ARIALNB_TTF_20_4bpp, kerning_ARIALNB_TTF_20_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont ARIALNB_TTF_20_4bpp(glyphs_ARIALNB_TTF_20_4bpp, 31, 24, 20, 0, 0, 4, 1, 0, 1, unicodes_ARIALNB_TTF_20_4bpp, kerning_ARIALNB_TTF_20_4bpp, 63, 0, 0, 0);
     return ARIALNB_TTF_20_4bpp;
 }

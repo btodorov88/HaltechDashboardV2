@@ -9,8 +9,9 @@ display_values dataUtils::getDefaults(int pageIndex){
 	Coolant coolant = {0,0,0,0};
 	Fuel fuel = {0,0,0,0,0};
 	Bat bat = {0,0,0,0};
+	IAT iat = {0,0};
 
-	display_values vals = {pageIndex,0,0,0,0,0,0,0,0,'N',0,oil,coolant,fuel,bat};
+	display_values vals = {pageIndex,0,0,0,0,0,0,0,'N',0,0,0,0,0, oil, coolant, fuel, bat, iat};
 	return vals;
 }
 

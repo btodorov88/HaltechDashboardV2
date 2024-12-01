@@ -47,6 +47,8 @@
 #define MIN_VOLTAGE_RPM_BOUND 2000
 #define MIN_VOLTAGE_THRESHOLD 12.5
 
+#define MAX_IAT_SPEED_BOUND 50 // the speed above which the max iat is tracked
+
 #define GEAR_SHIFT_RPM 7500
 #define GEAR_SHIFT_LAMP_RPM_DURATION 400 // RPMs before GEAR_SHIFT_RPM to start the gear shift indicator logic
 
@@ -177,10 +179,16 @@ static bool lowVoltageIndicator = true;
 static bool lowMinVoltageIndicator = false;
 
 static int iat = 0;
+static int maxIat = -99;
+
 static float afr = 0.0f;
 static int tps = 0;
 static bool celIndicator = true;
 static char gear = 'N';
+
+static float baro = 0;
+static int knockCount = 0;
+static double usedFuel = 0;
 
 static int shiftLampPersentage = 0; // From 0 to 100% - how intense the gear shift lamp should be
 
@@ -859,6 +867,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 
 		if (rpm > MIN_FUEL_PRESSURE_RPM_BOUND && (minFuelPressure < 0 || fuelPressure < minFuelPressure)) {
 			minFuelPressure = fuelPressure;
+			lowMinFuelPressure =(minFuelPressure < MIN_FUEL_PRESSURE_THRESHOLD);
 		}
 
 		if (rpm > MIN_OIL_PRESSURE_RPM_BOUND && (minOilPressure < 0 || oilPressure < minOilPressure)) {
@@ -895,6 +904,9 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 				lowMinVoltageIndicator = true;
 			}
 		}
+
+		uint16_t baro_in = (RxData[6] << 8) | (RxData[7] << 0);
+		baro = ((float) baro_in) * 0.1f;
 	}
 
 	if ((RxHeader.StdId == 0x3E0) && (RxHeader.IDE == CAN_ID_STD)
@@ -910,8 +922,14 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		}
 
 		iat = ((int) iat_in - 2731) * 0.1;
+		if(speed > MAX_IAT_SPEED_BOUND && iat > maxIat){
+			maxIat = iat;
+		}
 
 		fuelTemp = ((int) fuel_tmp_in - 2731) * 0.1;
+		if (fuelTemp > maxFuelTemp){
+			maxFuelTemp = fuelTemp;
+		}
 
 		oilTemp = ((int) oil_tmp_in - 2731) * 0.1;
 		if (oilTemp > maxOilTemp) {
@@ -957,6 +975,12 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		lowOilPressureIndicator = (RxData[1] >> 0) & 1;
 		celIndicator = (RxData[7] >> 7) & 1;
 		lowVoltageIndicator = (RxData[7] >> 6) & 1;
+	}
+
+	if ((RxHeader.StdId == 0x473) && (RxHeader.IDE == CAN_ID_STD)
+				&& (RxHeader.DLC == 8)) {
+		uint32_t fuelUsed_in = (RxData[0] << 32) | (RxData[1] << 16) | (RxData[2] << 8) | (RxData[3] << 0);
+		usedFuel = ((double) fuelUsed_in) * 0.001f;
 	}
 }
 /* USER CODE END 4 */
@@ -1061,6 +1085,10 @@ void DataFeedTask(void *argument)
 		lowMinVoltageIndicator
 	};
 
+	IAT iatContainer = {
+			iat,
+			maxIat
+	};
 
 	display_values vals = {
 			activeScreen,
@@ -1070,17 +1098,22 @@ void DataFeedTask(void *argument)
 			speed,
 			maxSpeed,
 
-			iat,
 			afr,
 			tps,
 			celIndicator,
 			gear,
 			shiftLampPersentage,
+			HAL_GetTick() / 1000,
+
+			baro,
+			knockCount,
+			usedFuel,
 
 			oil,
 			coolant,
 			fuel,
-			bat
+			bat,
+			iatContainer
 	};
 	xQueueSend(messageQ, &vals, 0);
 

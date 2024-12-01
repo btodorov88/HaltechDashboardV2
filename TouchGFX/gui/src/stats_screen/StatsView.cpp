@@ -145,6 +145,11 @@ void StatsView::updateVal(uint8_t* newValue)
 	}
 	if(!dataUtils::compare_float(values->fuel.minFuelPressure, current.fuel.minFuelPressure)){
 		touchgfx::Unicode::snprintfFloat(minFuelPressureBuffer, MINFUELPRESSURE_SIZE, "%.1f", values->fuel.minFuelPressure);
+		if(values->fuel.lowMinFuelPressure){
+			minFuelPressure.setColor(RED);
+		} else {
+			minFuelPressure.setColor(WHITE);
+		}
 		if(values->fuel.minFuelPressure < 0){
 			minFuelPressure.setVisible(false);
 		} else {
@@ -169,6 +174,11 @@ void StatsView::updateVal(uint8_t* newValue)
 
 	if(!dataUtils::compare_float(values->bat.minVoltage, current.bat.minVoltage)){
 		touchgfx::Unicode::snprintfFloat(minVoltageBuffer, MINVOLTAGE_SIZE, "%.1f", values->bat.minVoltage);
+		if(values->bat.minVoltage < 0){
+			minVoltage.setVisible(false);
+		} else {
+			minVoltage.setVisible(true);
+		}
 		if(values->bat.lowMinVoltageIndicator){
 			minVoltage.setColor(RED);
 		} else {
@@ -179,11 +189,62 @@ void StatsView::updateVal(uint8_t* newValue)
 		current.bat.lowMinVoltageIndicator = values->bat.lowMinVoltageIndicator;
 	}
 
+	//IAT
+	if(values->iat.iat != current.iat.iat)
+	{
+		touchgfx::Unicode::snprintf(curIatBuffer, CURIAT_SIZE, "%d", values->iat.iat);
+		curIat.invalidate();
+		current.iat.iat = values->iat.iat;
+	}
+	if(values->iat.maxIat != current.iat.maxIat)
+	{
+		touchgfx::Unicode::snprintf(maxIatBuffer, MAXIAT_SIZE, "%d", values->iat.maxIat);
+		if(values->iat.maxIat < -60){
+			maxIat.setVisible(false);
+		} else {
+			maxIat.setVisible(true);
+		}
+		maxIat.invalidate();
+		current.iat.maxIat = values->iat.maxIat;
+	}
+
 	//OTHER
 	if(values->tps != current.tps)
 	{
 		touchgfx::Unicode::snprintf(tpsBuffer, TPS_SIZE, "%d", values->tps);
 		tps.invalidate();
 		current.tps = values->tps;
+	}
+
+	if(values->runTime != current.runTime)
+	{
+		touchgfx::Unicode::snprintf(runTimeBuffer, RUNTIME_SIZE, "%02d:%02d", values->runTime / 60, values->runTime % 60);
+		runTime.invalidate();
+		current.runTime = values->runTime;
+	}
+
+	if(values->celIndicator != current.celIndicator){
+		cel.setVisible(values->celIndicator);
+		cel.invalidate();
+		current.celIndicator = values->celIndicator;
+	}
+
+	if(!dataUtils::compare_float(values->baro, current.baro)){
+		touchgfx::Unicode::snprintfFloat(baroBuffer, BARO_SIZE, "%.1f", values->baro);
+		baro.invalidate();
+		current.baro = values->baro;
+	}
+
+	if(values->knockCount != current.knockCount)
+	{
+		touchgfx::Unicode::snprintf(knockCntBuffer, KNOCKCNT_SIZE, "%d", values->knockCount);
+		knockCnt.invalidate();
+		current.knockCount = values->knockCount;
+	}
+
+	if(!dataUtils::compare_float(values->usedFuel, current.usedFuel)){
+		touchgfx::Unicode::snprintfFloat(fuelUsedBuffer, FUELUSED_SIZE, "%.2f", values->usedFuel);
+		fuelUsed.invalidate();
+		current.usedFuel = values->usedFuel;
 	}
 }
