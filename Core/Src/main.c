@@ -979,7 +979,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 
 	if ((RxHeader.StdId == 0x473) && (RxHeader.IDE == CAN_ID_STD)
 				&& (RxHeader.DLC == 8)) {
-		uint32_t fuelUsed_in = (RxData[0] << 32) | (RxData[1] << 16) | (RxData[2] << 8) | (RxData[3] << 0);
+		uint32_t fuelUsed_in = (RxData[0] << 24) | (RxData[1] << 16) | (RxData[2] << 8) | (RxData[3] << 0);
 		usedFuel = ((double) fuelUsed_in) * 0.001f;
 	}
 }
