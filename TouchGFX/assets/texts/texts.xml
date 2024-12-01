@@ -13,7 +13,7 @@
         <Translation Language="GB">0000</Translation>
       </Text>
       <Text Id="__SingleUse_OS4N" Alignment="Left" TypographyId="GearIndicator">
-        <Translation Language="GB">0.0</Translation>
+        <Translation Language="GB">0.00</Translation>
       </Text>
       <Text Id="__SingleUse_C5CS" Alignment="Left" TypographyId="GearIndicator">
         <Translation Language="GB">00:00</Translation>

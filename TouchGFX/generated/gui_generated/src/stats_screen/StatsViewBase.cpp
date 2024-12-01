@@ -163,7 +163,7 @@ StatsViewBase::StatsViewBase()
     runTime.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MZIZ));
     add(runTime);
 
-    baro.setXY(116, 156);
+    baro.setXY(100, 156);
     baro.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     baro.setLinespacing(0);
     Unicode::snprintf(baroBuffer, BARO_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_OS4N).getText());

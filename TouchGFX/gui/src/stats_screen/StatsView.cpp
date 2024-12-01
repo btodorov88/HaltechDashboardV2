@@ -5,7 +5,7 @@
 static display_values current;
 
 static colortype RED = touchgfx::Color::getColorFromRGB(255, 0, 0);
-static colortype YELLOW = touchgfx::Color::getColorFromRGB(255, 255, 0);
+//static colortype YELLOW = touchgfx::Color::getColorFromRGB(255, 255, 0);
 static colortype WHITE = touchgfx::Color::getColorFromRGB(255, 255, 255);
 
 StatsView::StatsView()
@@ -105,7 +105,7 @@ void StatsView::updateVal(uint8_t* newValue)
 		if(values->coolant.coolantTempWarning){
 			curCoolantTemp.setColor(RED);
 		} else {
-			curCoolantTemp.setColor(YELLOW);
+			curCoolantTemp.setColor(WHITE);
 		}
 		curCoolantTemp.invalidate();
 		current.coolant.coolantTemp = values->coolant.coolantTemp;
@@ -117,7 +117,7 @@ void StatsView::updateVal(uint8_t* newValue)
 		if(values->coolant.maxCoolentTempWarning){
 			maxCoolantTemp.setColor(RED);
 		} else {
-			maxCoolantTemp.setColor(YELLOW);
+			maxCoolantTemp.setColor(WHITE);
 		}
 		maxCoolantTemp.invalidate();
 		current.coolant.maxCoolantTemp = values->coolant.maxCoolantTemp;
@@ -230,7 +230,7 @@ void StatsView::updateVal(uint8_t* newValue)
 	}
 
 	if(!dataUtils::compare_float(values->baro, current.baro)){
-		touchgfx::Unicode::snprintfFloat(baroBuffer, BARO_SIZE, "%.1f", values->baro);
+		touchgfx::Unicode::snprintfFloat(baroBuffer, BARO_SIZE, "%.2f", values->baro);
 		baro.invalidate();
 		current.baro = values->baro;
 	}
@@ -242,8 +242,8 @@ void StatsView::updateVal(uint8_t* newValue)
 		current.knockCount = values->knockCount;
 	}
 
-	if(!dataUtils::compare_float(values->usedFuel, current.usedFuel)){
-		touchgfx::Unicode::snprintfFloat(fuelUsedBuffer, FUELUSED_SIZE, "%.2f", values->usedFuel);
+	if(!dataUtils::compare_float(values->usedFuel, current.usedFuel, 0.1f)){
+		touchgfx::Unicode::snprintfFloat(fuelUsedBuffer, FUELUSED_SIZE, "%.1f", values->usedFuel);
 		fuelUsed.invalidate();
 		current.usedFuel = values->usedFuel;
 	}

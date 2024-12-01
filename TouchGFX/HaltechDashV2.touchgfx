@@ -886,9 +886,9 @@
           {
             "Type": "TextArea",
             "Name": "baro",
-            "X": 116,
+            "X": 100,
             "Y": 156,
-            "Width": 40,
+            "Width": 56,
             "Height": 28,
             "TextId": "__SingleUse_VTO8",
             "TextRotation": "0",

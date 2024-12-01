@@ -12,7 +12,7 @@ TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     136, // T___SINGLEUSE_1GLL: "00.0"
     141, // T___SINGLEUSE_6028: "0000"
-    137, // T___SINGLEUSE_OS4N: "0.0"
+    131, // T___SINGLEUSE_OS4N: "0.00"
     107, // T___SINGLEUSE_C5CS: "00:00"
     166, // T___SINGLEUSE_HVMW: "-00"
     65,  // T___SINGLEUSE_P1OY: "<>"

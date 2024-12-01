@@ -906,7 +906,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
 		}
 
 		uint16_t baro_in = (RxData[6] << 8) | (RxData[7] << 0);
-		baro = ((float) baro_in) * 0.1f;
+		baro = ((float) baro_in) * 0.001f;
 	}
 
 	if ((RxHeader.StdId == 0x3E0) && (RxHeader.IDE == CAN_ID_STD)
