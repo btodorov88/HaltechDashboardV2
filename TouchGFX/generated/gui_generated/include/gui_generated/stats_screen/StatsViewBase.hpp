@@ -56,7 +56,6 @@ protected:
     touchgfx::TextAreaWithOneWildcard minVoltage;
     touchgfx::TextAreaWithOneWildcard curVoltage;
     touchgfx::TextAreaWithOneWildcard fuelUsed;
-    touchgfx::TextAreaWithOneWildcard knockCnt;
     touchgfx::TextArea textArea1_1;
     touchgfx::TextArea textArea1_1_2;
     touchgfx::TextArea textArea1_1_2_1;
@@ -77,7 +76,6 @@ protected:
     touchgfx::TextArea textArea1_1_1_1_1_1_1;
     touchgfx::TextArea textArea1_1_1_1_1_1_1_1;
     touchgfx::TextArea textArea1_1_1_1_1_1_1_1_1;
-    touchgfx::TextArea textArea1_1_1_1_1_1_1_1_1_1;
     touchgfx::Line line1_1;
     touchgfx::PainterRGB565 line1_1Painter;
     touchgfx::Line line1_1_1;
@@ -131,8 +129,6 @@ protected:
     touchgfx::Unicode::UnicodeChar curVoltageBuffer[CURVOLTAGE_SIZE];
     static const uint16_t FUELUSED_SIZE = 10;
     touchgfx::Unicode::UnicodeChar fuelUsedBuffer[FUELUSED_SIZE];
-    static const uint16_t KNOCKCNT_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar knockCntBuffer[KNOCKCNT_SIZE];
     static const uint16_t MAXIAT_SIZE = 10;
     touchgfx::Unicode::UnicodeChar maxIatBuffer[MAXIAT_SIZE];
     static const uint16_t CURIAT_SIZE = 10;

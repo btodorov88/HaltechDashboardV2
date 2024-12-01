@@ -27,14 +27,14 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:78:18:virtual bool touchgfx::AbstractPainter::setup(const touchgfx::Rect&) const	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:90:18:virtual void touchgfx::AbstractPainter::tearDown() const	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<StatsPresenter>::~View()	1
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_screen/StatsViewBase.cpp:392:6:virtual void StatsViewBase::setupScreen()	1
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_screen/StatsViewBase.cpp:377:6:virtual void StatsViewBase::setupScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<StatsPresenter>::~View()	1
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_screen/StatsViewBase.cpp:387:1:StatsViewBase::~StatsViewBase()	1
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_screen/StatsViewBase.cpp:387:1:virtual StatsViewBase::~StatsViewBase()	1
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_screen/StatsViewBase.cpp:397:6:virtual void StatsViewBase::changeToScreen1()	1
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_screen/StatsViewBase.cpp:372:1:StatsViewBase::~StatsViewBase()	1
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_screen/StatsViewBase.cpp:372:1:virtual StatsViewBase::~StatsViewBase()	1
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_screen/StatsViewBase.cpp:382:6:virtual void StatsViewBase::changeToScreen1()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
@@ -49,4 +49,4 @@ C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_scr
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:65:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	4
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:248:10:void touchgfx::Line::setLineWidth(T) [with T = int]	2
-C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_screen/StatsViewBase.cpp:10:1:StatsViewBase::StatsViewBase()	45
+C:/TouchGFXProjects/HaltechDashV2/TouchGFX/generated/gui_generated/src/stats_screen/StatsViewBase.cpp:10:1:StatsViewBase::StatsViewBase()	43

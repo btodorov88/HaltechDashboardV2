@@ -9,9 +9,6 @@
       <Text Id="__SingleUse_1GLL" Alignment="Left" TypographyId="GearIndicator">
         <Translation Language="GB">00.0</Translation>
       </Text>
-      <Text Id="__SingleUse_6028" Alignment="Left" TypographyId="GearIndicator">
-        <Translation Language="GB">0000</Translation>
-      </Text>
       <Text Id="__SingleUse_OS4N" Alignment="Left" TypographyId="GearIndicator">
         <Translation Language="GB">0.00</Translation>
       </Text>
@@ -132,9 +129,6 @@
       <Text Id="__SingleUse_1824" Alignment="Left" TypographyId="SummaryLabels">
         <Translation Language="GB">Fuel</Translation>
       </Text>
-      <Text Id="__SingleUse_ET97" Alignment="Right" TypographyId="SummaryValues">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
       <Text Id="__SingleUse_4OPD" Alignment="Left" TypographyId="SummaryHeaders">
         <Translation Language="GB">Temps</Translation>
       </Text>
@@ -143,9 +137,6 @@
       </Text>
       <Text Id="__SingleUse_NLYQ" Alignment="Right" TypographyId="SummaryValues">
         <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_HIQX" Alignment="Left" TypographyId="SummaryLabels">
-        <Translation Language="GB">Knock</Translation>
       </Text>
       <Text Id="__SingleUse_DCOQ" Alignment="Right" TypographyId="SummaryValues">
         <Translation Language="GB">&lt;value&gt;</Translation>
