@@ -18,8 +18,9 @@ KEEP extern const touchgfx::GlyphNode glyphs_arialbd_28_4bpp[] FONT_TABLE_LOCATI
     {  1288, 0x0039,  15,  20,  20,   0,  16,   0,   0, 0x00 },
     {  1448, 0x003A,   5,  15,  15,   2,   9,   0,   0, 0x00 },
     {  1493, 0x003F,  15,  20,  20,   1,  17,   0,   0, 0x00 },
-    {  1653, 0x004E,  16,  20,  20,   2,  20,   0,   0, 0x00 },
-    {  1813, 0x0052,  18,  20,  20,   2,  20,   0,   0, 0x00 }
+    {  1653, 0x004C,  15,  20,  20,   2,  17,   0,   0, 0x00 },
+    {  1813, 0x004E,  16,  20,  20,   2,  20,   0,   0, 0x00 },
+    {  1973, 0x0052,  18,  20,  20,   2,  20,   0,   0, 0x00 }
 };
 
 // arialbd_28_4bpp
@@ -38,6 +39,6 @@ touchgfx::GeneratedFont& getFont_arialbd_28_4bpp();
 
 touchgfx::GeneratedFont& getFont_arialbd_28_4bpp()
 {
-    static touchgfx::GeneratedFont arialbd_28_4bpp(glyphs_arialbd_28_4bpp, 16, 28, 28, 0, 0, 4, 1, 0, 1, unicodes_arialbd_28_4bpp, kerning_arialbd_28_4bpp, 63, 0, 0, &arialbd_contextualFormsTable);
+    static touchgfx::GeneratedFont arialbd_28_4bpp(glyphs_arialbd_28_4bpp, 17, 28, 28, 0, 0, 4, 1, 0, 1, unicodes_arialbd_28_4bpp, kerning_arialbd_28_4bpp, 63, 0, 0, &arialbd_contextualFormsTable);
     return arialbd_28_4bpp;
 }

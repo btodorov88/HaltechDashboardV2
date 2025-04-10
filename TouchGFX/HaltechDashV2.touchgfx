@@ -951,7 +951,7 @@
             "Name": "fuelUsed",
             "X": 100,
             "Y": 232,
-            "Width": 56,
+            "Width": 89,
             "Height": 28,
             "TextId": "__SingleUse_NLYQ",
             "TextRotation": "0",

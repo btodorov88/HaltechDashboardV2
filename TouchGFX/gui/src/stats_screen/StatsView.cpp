@@ -235,8 +235,8 @@ void StatsView::updateVal(uint8_t* newValue)
 		current.baro = values->baro;
 	}
 
-	if(!dataUtils::compare_float(values->usedFuel, current.usedFuel, 0.1f)){
-		touchgfx::Unicode::snprintfFloat(fuelUsedBuffer, FUELUSED_SIZE, "%.1f", values->usedFuel);
+	if(!dataUtils::compare_float(values->usedFuel, current.usedFuel, 0.01f)){
+		touchgfx::Unicode::snprintfFloat(fuelUsedBuffer, FUELUSED_SIZE, "%.2f", values->usedFuel);
 		fuelUsed.invalidate();
 		current.usedFuel = values->usedFuel;
 	}

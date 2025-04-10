@@ -24602,7 +24602,7 @@ ExtFlashSection
                 0x90085868                        . = ALIGN (0x4)
 
 FontFlashSection
-                0x90085868     0x458c
+                0x90085868     0x463c
  *(FontFlashSection FontFlashSection.*)
  FontFlashSection
                 0x90085868      0x277 ./Application/User/generated/Font_ARIALNB_TTF_18_4bpp_0.o
@@ -24637,71 +24637,72 @@ FontFlashSection
                 0x90088c4c                unicodes_arialbd_14_4bpp_0
  *fill*         0x90088daf        0x1 
  FontFlashSection
-                0x90088db0      0x7c9 ./Application/User/generated/Font_arialbd_28_4bpp_0.o
+                0x90088db0      0x869 ./Application/User/generated/Font_arialbd_28_4bpp_0.o
                 0x90088db0                unicodes_arialbd_28_4bpp_0
- *fill*         0x90089579        0x3 
+ *fill*         0x90089619        0x3 
  FontFlashSection
-                0x9008957c       0xb6 ./Application/User/generated/Table_ARIALNB_TTF_18_4bpp.o
-                0x9008957c                glyphs_ARIALNB_TTF_18_4bpp
- *fill*         0x90089632        0x2 
+                0x9008961c       0xb6 ./Application/User/generated/Table_ARIALNB_TTF_18_4bpp.o
+                0x9008961c                glyphs_ARIALNB_TTF_18_4bpp
+ *fill*         0x900896d2        0x2 
  FontFlashSection
-                0x90089634      0x188 ./Application/User/generated/Table_ARIALNB_TTF_20_4bpp.o
-                0x90089634                glyphs_ARIALNB_TTF_20_4bpp
+                0x900896d4      0x188 ./Application/User/generated/Table_ARIALNB_TTF_20_4bpp.o
+                0x900896d4                glyphs_ARIALNB_TTF_20_4bpp
  FontFlashSection
-                0x900897bc       0x9a ./Application/User/generated/Table_ARIALNB_TTF_30_4bpp.o
-                0x900897bc                glyphs_ARIALNB_TTF_30_4bpp
- *fill*         0x90089856        0x2 
+                0x9008985c       0x9a ./Application/User/generated/Table_ARIALNB_TTF_30_4bpp.o
+                0x9008985c                glyphs_ARIALNB_TTF_30_4bpp
+ *fill*         0x900898f6        0x2 
  FontFlashSection
-                0x90089858       0x9a ./Application/User/generated/Table_ARIALNB_TTF_36_4bpp.o
-                0x90089858                glyphs_ARIALNB_TTF_36_4bpp
- *fill*         0x900898f2        0x2 
+                0x900898f8       0x9a ./Application/User/generated/Table_ARIALNB_TTF_36_4bpp.o
+                0x900898f8                glyphs_ARIALNB_TTF_36_4bpp
+ *fill*         0x90089992        0x2 
  FontFlashSection
-                0x900898f4       0xe0 ./Application/User/generated/Table_ARIALNB_TTF_38_4bpp.o
-                0x900898f4                glyphs_ARIALNB_TTF_38_4bpp
+                0x90089994       0xe0 ./Application/User/generated/Table_ARIALNB_TTF_38_4bpp.o
+                0x90089994                glyphs_ARIALNB_TTF_38_4bpp
  FontFlashSection
-                0x900899d4       0xb6 ./Application/User/generated/Table_ARIALNB_TTF_44_4bpp.o
-                0x900899d4                glyphs_ARIALNB_TTF_44_4bpp
- *fill*         0x90089a8a        0x2 
+                0x90089a74       0xb6 ./Application/User/generated/Table_ARIALNB_TTF_44_4bpp.o
+                0x90089a74                glyphs_ARIALNB_TTF_44_4bpp
+ *fill*         0x90089b2a        0x2 
  FontFlashSection
-                0x90089a8c       0x7e ./Application/User/generated/Table_arialbd_10_4bpp.o
-                0x90089a8c                glyphs_arialbd_10_4bpp
- *fill*         0x90089b0a        0x2 
+                0x90089b2c       0x7e ./Application/User/generated/Table_arialbd_10_4bpp.o
+                0x90089b2c                glyphs_arialbd_10_4bpp
+ *fill*         0x90089baa        0x2 
  FontFlashSection
-                0x90089b0c      0x188 ./Application/User/generated/Table_arialbd_12_4bpp.o
-                0x90089b0c                glyphs_arialbd_12_4bpp
+                0x90089bac      0x188 ./Application/User/generated/Table_arialbd_12_4bpp.o
+                0x90089bac                glyphs_arialbd_12_4bpp
  FontFlashSection
-                0x90089c94       0x7e ./Application/User/generated/Table_arialbd_14_4bpp.o
-                0x90089c94                glyphs_arialbd_14_4bpp
- *fill*         0x90089d12        0x2 
+                0x90089d34       0x7e ./Application/User/generated/Table_arialbd_14_4bpp.o
+                0x90089d34                glyphs_arialbd_14_4bpp
+ *fill*         0x90089db2        0x2 
  FontFlashSection
-                0x90089d14       0xe0 ./Application/User/generated/Table_arialbd_28_4bpp.o
-                0x90089d14                glyphs_arialbd_28_4bpp
+                0x90089db4       0xee ./Application/User/generated/Table_arialbd_28_4bpp.o
+                0x90089db4                glyphs_arialbd_28_4bpp
  *(.gnu.linkonce.r.*)
-                0x90089df4                        . = ALIGN (0x4)
+                0x90089ea4                        . = ALIGN (0x4)
+ *fill*         0x90089ea2        0x2 
 
 TextFlashSection
-                0x90089df4      0x3dc
+                0x90089ea4      0x3e4
  *(TextFlashSection TextFlashSection.*)
  TextFlashSection
-                0x90089df4      0x198 ./Application/User/generated/LanguageGb.o
-                0x90089df4                indicesGb
+                0x90089ea4      0x198 ./Application/User/generated/LanguageGb.o
+                0x90089ea4                indicesGb
  TextFlashSection
-                0x90089f8c      0x174 ./Application/User/generated/Texts.o
-                0x90089f8c                texts_all_languages
+                0x9008a03c      0x17c ./Application/User/generated/Texts.o
+                0x9008a03c                texts_all_languages
  TextFlashSection
-                0x9008a100       0xd0 ./Application/User/generated/TypedTextDatabase.o
-                0x9008a100                typedTextDatabaseArray
-                0x9008a104                typedText_database_DEFAULT
+                0x9008a1b8       0xd0 ./Application/User/generated/TypedTextDatabase.o
+                0x9008a1b8                typedTextDatabaseArray
+                0x9008a1bc                typedText_database_DEFAULT
  *(.gnu.linkonce.r.*)
-                0x9008a1d0                        . = ALIGN (0x4)
+                0x9008a288                        . = ALIGN (0x4)
 OUTPUT(STM32F746G_DISCO.elf elf32-littlearm)
 LOAD linker stubs
 LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
 LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.rel.dyn        0x9008a1d0        0x0
- .rel.iplt      0x9008a1d0        0x0 C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x9008a288        0x0
+ .rel.iplt      0x9008a288        0x0 C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
 .debug_info     0x00000000   0x132048
  .debug_info    0x00000000      0x113 ./Application/User/Core/freertos.o
